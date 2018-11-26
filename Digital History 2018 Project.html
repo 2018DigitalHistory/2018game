@@ -115,36 +115,20 @@ color: green;
 }
 
 a:hover {
-color:yellow;
-border-bottom: 5px solid blue;
+border-bottom: 3px solid blue;
 text-decoration: none;
 }
 
-.custom1 {
-background-color: red;
-color: white;
-}
-
-a.custom1 {
-color: black;
-}
-
-.bigtext {
-font-size: 300%;
-color: yellow;
-}
-
 .footnote {
- opacity: .2; 
+ opacity: .1; 
  color: black;
 }
 
 .footnote:hover {
-  color: red;
+  color: black;
   opacity: 1;
   transition: 2s all ease;
 }
-
 
 .maintext {
   position: relative;
@@ -153,21 +137,57 @@ color: yellow;
   width: 74%;
 }
 
-.sidebar {
-  position: top;
-  display: block;
-  float: left;
-  width: 24%;
-  background-color: black;
-  color: red;
-  height: 100%;
-}
-
 .outer_control{
   position:relative;
   text-align: left;
 }
 
+ /* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+} 
 
 
 
@@ -177,38 +197,43 @@ color: yellow;
 
 
 
+
 </script><tw-passagedata pid="1" name="Untitled Passage" tags="" position="250,26" size="100,100">Welcome to the 2018 Digital History Course Class project
 
-This project was built in the autumn of 2018 by a team of students at Saint Louis University using TWINE, which is an open-source tool for contructing interactive narratives.
+This project was built in the autumn of 2018 by a team of history students at Saint Louis University using &lt;a href=&quot;http://twinery.org/&quot; target=&quot;_blank&quot;&gt;TWINE&lt;/a&gt;, which is an open-source tool for contructing interactive narratives.
 
 [[Enter-&gt;landingpage]]</tw-passagedata><tw-passagedata pid="2" name="landingpage" tags="" position="502,26" size="100,100">&lt;h1&gt;Catchy Title&lt;/h1&gt;
 
-The poet Geoffrey Chaucer is perhaps the most famous Londoner of the fourteenth century. As the author of &lt;i&gt;The Canterbury Tales&lt;/i&gt;, one of the great literary works of the Later Middle Ages, he has played an important role in shaping western culture. 
+The poet Geoffrey Chaucer is perhaps the most famous Londoner of the fourteenth century (1). As the author of &lt;i&gt;The Canterbury Tales&lt;/i&gt;, one of the great literary works of the Later Middle Ages, he has played an important role in shaping western culture. 
 
-In &lt;i&gt;The Canterbury Tales&lt;/i&gt;, Chaucer tells the story of how a group of disparate people, drawn from many walks of life, meet at an inn located in London&#39;s southern suburb, and then set off together on a pilgrimage from  London to Canterbury. As they travel, they tell stories that are revealing both of themselves and their ideas, values and beliefs.
+In &lt;i&gt;The Canterbury Tales&lt;/i&gt;, Chaucer tells the story of how a group of disparate people, drawn from many walks of life, meet at an inn located in London&#39;s southern suburb, and then set off together on a pilgrimage. As they travel, they tell stories that reveal their ideas, values and beliefs.
+
+&lt;a title=&quot;Meta-Wiki [Public domain], via Wikimedia Commons&quot; href=&quot;https://commons.wikimedia.org/wiki/File:Canterbury_Tales.png&quot; target=&quot;_blank&quot;&gt;&lt;img width=&quot;256&quot; alt=&quot;Canterbury Tales&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/1/1c/Canterbury_Tales.png&quot;&gt;&lt;/a&gt;
 
 Inspired by that work, this digital projects aims to immerse you in fourteenth century London, to give you a better understanding of Chaucer&#39;s time and place. 
 
-In the spirit of &lt;i&gt;The Canterbury Tales&lt;/i&gt;, this is a collaborative digital, reflecting many points of view. Moreover, this is also an interactive work, that asks you, the reader, the participate in shaping the narrative. 
+In the spirit of &lt;i&gt;The Canterbury Tales&lt;/i&gt;, this project aims to  reflect many points of view. Moreover, this is also an interactive work, that asks you, the reader, the participate in shaping the narrative. 
 
-In moment, you will be asked to make your first choice, and that will set you on a journey into Chaucer&#39;s London.
+In moment, you will be asked to make your first choice, and that will set you on a journey through Chaucer&#39;s London.
 
 [[Begin your journey-&gt;launchpad]]
 
+(1) &lt;span class=&quot;footnote&quot;&gt;Geoffrey Chaucer&#39;s family came from humble origins. His grandfather, Robert (c.1288-1314), immigrated to London and apprenticed with John le Chaucer (a maker of shoes or boots), and took his name.&lt;/span&gt;
 
+</tw-passagedata><tw-passagedata pid="3" name="launchpad" tags="" position="800,100" size="100,100">Medieval people had a wide range of different skills and talents, for this was a socity where wealth and opportunities were not equally divided. At the top of society was the nobility, whose privilges and power were founded on their ownership of land. At the other extreme were the humble men and women who laboured on farms, eaking out an existence through agriculture. Yet in between those two extremes there were also artisans, traders, merchants, and the clergy, who all had contrasting ways of life. A further complication is that this was a soceity where men and women had different roles, and so gender played an important role in shaping an individuals wealth and opportunities. Yet this was also an era of plagues and deadly disease, which struck down people indiscriminately, so no one was assured of living into old age.
 
-</tw-passagedata><tw-passagedata pid="3" name="launchpad" tags="" position="800,100" size="100,100">Medieval society was formed from a diversity of people, who had varying degrees of wealth, privilege, education and skill. Each individual faced different opportunities and challenges. 
+Which path would you like to explore first?
 
-Men and women had contrasting experiences, as this was a culture where gender played a large role in shaping an individual&#39;s opportunities. Inherited wealth and social position (or lack thereof) also had a significant impact in conditioning what path an individual could take through life. Yet fortune also played an important role in shaping life, for this was an era of deadly diseases, such as the plague.
+&lt;a title=&quot;AnonymousUnknown author [Public domain], via Wikimedia Commons&quot; href=&quot;https://commons.wikimedia.org/wiki/File:The_Knight_-_Ellesmere_Chaucer.jpg&quot; target=&quot;_blank&quot;&gt;&lt;img width=&quot;256&quot; alt=&quot;The Knight - Ellesmere Chaucer&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/The_Knight_-_Ellesmere_Chaucer.jpg/256px-The_Knight_-_Ellesmere_Chaucer.jpg&quot;&gt;&lt;/a&gt;[[Experience 1]]
 
-Which experience would you like to explore?
-
-[[Experience 1]]
-
+&lt;a title=&quot;AnonymousUnknown author [Public domain], via Wikimedia Commons&quot; href=&quot;https://commons.wikimedia.org/wiki/File:The_Merchant_-_Ellesmere_Chaucer.jpg&quot; target=&quot;_blank&quot;&gt;&lt;img width=&quot;512&quot; alt=&quot;The Merchant - Ellesmere Chaucer&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/9/9b/The_Merchant_-_Ellesmere_Chaucer.jpg&quot;&gt;&lt;/a&gt;
 [[Experience 2]]
 
+&lt;a title=&quot;Geoffey Chaucer
+derivative work: Toby1 [Public domain], via Wikimedia Commons&quot; href=&quot;https://commons.wikimedia.org/wiki/File:Wife-of-Bath-ms-2.jpg&quot; target=&quot;_blank&quot;&gt;&lt;img width=&quot;128&quot; alt=&quot;Wife-of-Bath-ms-2&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/4/4a/Wife-of-Bath-ms-2.jpg&quot;&gt;&lt;/a&gt;
 [[Experience 3]]
 
+&lt;a title=&quot;AnonymousUnknown author [Public domain], via Wikimedia Commons&quot; href=&quot;https://commons.wikimedia.org/wiki/File:The_Reeve_-_Ellesmere_Chaucer.jpg&quot; target=&quot;_blank&quot;&gt;&lt;img width=&quot;512&quot; alt=&quot;The Reeve - Ellesmere Chaucer&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/4/44/The_Reeve_-_Ellesmere_Chaucer.jpg&quot;&gt;&lt;/a&gt;
 [[Experience 4]]</tw-passagedata><tw-passagedata pid="4" name="Experience 1" tags="" position="601,200" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="5" name="Experience 2" tags="" position="699,300" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="6" name="Experience 3" tags="" position="899,300" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="7" name="Experience 4" tags="" position="999,198" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata></div>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
