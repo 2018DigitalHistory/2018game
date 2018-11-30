@@ -151,7 +151,9 @@ But first, you must understand your origins, a taste of what is to come.
 &lt;&lt;set $guild to 5&gt;&gt;
 &lt;&lt;set $family to 5&gt;&gt;
 &lt;/div&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Guild Good" tags="" position="2353,267" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="3" name="The Choice" tags="" position="847,395" size="100,100">&quot;Well at least you are not completely useless! You know your chores, get to them!&quot;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Guild Good" tags="" position="2407,977" size="100,100">&lt;&lt;if $religion &gt;5&gt;&gt; [[Religion Good]] 
+&lt;&lt;elseif $religion&lt;=5&gt;&gt; [[Religion Bad]] 
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="The Choice" tags="" position="847,395" size="100,100">&quot;Well at least you are not completely useless! You know your chores, get to them!&quot;
 
 [[&quot;Yes, Master Organ&quot;]] or [[&quot;Damn you to Hell!&quot;]]
 
@@ -213,24 +215,44 @@ Your heart is torn, knowing your master has given strict instructions, but Const
 &quot;Huey, my boy,&quot; Father Burke says, &quot;I have something that may rather interest you. The church needs a [[new altar cloth]], silk is my preference. The Lord demands the best from his mortal servants.&quot;
 
 You feel a twinge of guilt. You have silk, but it has been reserved by Lady Strange, the Earl of Nottingham&#39;s wife, for [[a new dress]].
-</tw-passagedata><tw-passagedata pid="11" name="Religion Bad" tags="" position="2465,377" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="12" name="Family Good" tags="" position="2353,159" size="100,100">If Fam Var. &gt;5
+</tw-passagedata><tw-passagedata pid="11" name="Religion Bad" tags="" position="2582,1111" size="100,100">&lt;&lt;if $civic &gt;5&gt;&gt; [[Civic Good]] 
+&lt;&lt;elseif $civic&lt;=5&gt;&gt; [[Civic Bad]] 
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Family Good" tags="" position="2241,987" size="100,100">If Fam Var. &gt;5
 
 
-QUOTE</tw-passagedata><tw-passagedata pid="13" name="Civic Bad" tags="" position="2472,591" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="14" name="Guild Bad" tags="" position="2467,269" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="15" name="Family Bad" tags="" position="2463,163" size="100,100">If Fam Var &lt; or = 5
+&lt;&lt;if $guild &gt;5&gt;&gt; [[Guild Good]] 
+&lt;&lt;elseif $guild&lt;=5&gt;&gt; [[Guild Bad]] 
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="Civic Bad" tags="" position="2750,1134" size="100,100">&lt;&lt;if $royalty &gt;5&gt;&gt; [[Royalty Good]] 
+&lt;&lt;elseif $royalty&lt;=5&gt;&gt; [[Royalty Bad]] 
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Guild Bad" tags="" position="2417,1114" size="100,100">&lt;&lt;if $religion &gt;5&gt;&gt; [[Religion Good]] 
+&lt;&lt;elseif $religion&lt;=5&gt;&gt; [[Religion Bad]] 
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="Family Bad" tags="" position="2236,1151" size="100,100">If Fam Var &lt; or = 5
 
-QUOTE</tw-passagedata><tw-passagedata pid="16" name="Royalty Good" tags="" position="2355,479" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="17" name="Royalty Bad" tags="" position="2462,485" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="18" name="Civic Good" tags="" position="2356,588" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="19" name="Religion Good" tags="" position="2352,373" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="20" name="The Ending WORK" tags="" position="2153,767" size="100,100">Congratulations! You have survived a truly tumultuous time in the city of London, and that is no small feat in of itself! Through royal upheaval, plague, religious pressure, and guild reputation, you should now have a basic taste of  the London experinece, and living in it during the 14th century.
+QUOTE
+
+&lt;&lt;if $guild &gt;5&gt;&gt; [[Guild Good]] 
+&lt;&lt;elseif $guild&lt;=5&gt;&gt; [[Guild Bad]] 
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Royalty Good" tags="" position="2939,1133" size="100,100">[[Bibliography WORK]] </tw-passagedata><tw-passagedata pid="17" name="Royalty Bad" tags="" position="2927,997" size="100,100">[[Bibliography WORK]] </tw-passagedata><tw-passagedata pid="18" name="Civic Good" tags="" position="2746,989" size="100,100">&lt;&lt;if $royalty &gt;5&gt;&gt; [[Royalty Good]] 
+&lt;&lt;elseif $royalty&lt;=5&gt;&gt; [[Royalty Bad]] 
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Religion Good" tags="" position="2583,976" size="100,100">&lt;&lt;if $civic &gt;5&gt;&gt; [[Civic Good]] 
+&lt;&lt;elseif $civic&lt;=5&gt;&gt; [[Civic Bad]] 
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="The Ending" tags="" position="2100,1039" size="100,100">Congratulations! You have survived a truly tumultuous time in the city of London, and that is no small feat in of itself! Through royal upheaval, plague, religious pressure, and guild reputation, you should now have a basic taste of the London experience, and living in it during the 14th century.
 
 The story of London, and much of history, is the formation of personal relationships and how they crafetd a larger society. Battles and kings are only a mere fraction of the human experience, and being a merchant and mayor in London is a small example of the vast majority. 
 
-You just learned of your fate in each of the Pillars. Even if the game yielded negative results in some of the Pillars, know that you have not failed. To chase power, or be truly holy, or maintain your family, required sacrifices in other aspects of your lfie. If you were able to fluorish in all the Pillars, then perhaps you are truly a person of history, one who will be remmebred above all others. The passage of time will render your individual chocies forgotten, but the deeds insprored by those chocies coud make you immortal.
+You will soon learn of your fate in each of the Pillars. Even if the game yielded negative results in some of the Pillars, know that you have not failed. To chase power, or be truly holy, or maintain your family, all required sacrifices in other aspects of your lfie. If you were able to fluorish in all the Pillars, then perhaps you are truly a person of history, one who will be remembered above all others. The passage of time will render your individual choices forgotten, but the deeds inspired by your choice could render you great.
 
-[[Bibliography WORK]] 
+You may continue on here to learn about each of your pillars.
 
-</tw-passagedata><tw-passagedata pid="21" name="Bibliography WORK" tags="" position="2420,753" size="100,100">Check out these sources for in-depth information on many of the themes and details found in the game:
+&lt;&lt;if $family&gt;5&gt;&gt; [[Family Good]] 
+&lt;&lt;elseif $family&lt;5&gt;&gt; [[Family Bad]] 
+&lt;&lt;/if&gt;&gt;
+
+</tw-passagedata><tw-passagedata pid="21" name="Bibliography WORK" tags="" position="3143,1075" size="100,100">Check out these sources for in-depth information on many of the themes and details found in the game:
 
 On Children, Family, and Apprentices:
 
-Hanawalt, Barbara. Growing Up in Medieval London : The Experience of Childhood in History. New York: Oxford University Press, 1993. http://ezp.slu.edu/login?url=http://search.ebscohost.com/login.aspx?direct=true&amp;db=nlebk&amp;AN=53302&amp;site=eds-live.
+Hanawalt, Barbara. Growing Up in Medieval London : The Experience of Childhood in History. New York: Oxford University Press, 1993. 
 
 On the Civic Government:
 
@@ -274,7 +296,6 @@ He beams, perhaps realizing the internal struggle you just had. As you continue 
 
 &lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $religion +=1&gt;&gt;
-&lt;&lt;set $royalty -=1&gt;&gt;
 &lt;&lt;set $guild -=1&gt;&gt;
 &lt;&lt;set $civic +=1&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="a new dress" tags="" position="1019,1303" size="100,100">&quot;I am sorry, Father, but the silk I have reserved is for the Lady Strange, I would dare not betray such a customer.&quot;
@@ -289,7 +310,6 @@ As you continue to discuss specifications, your wife Elizabeth descends from abo
 
 &lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $religion -=1&gt;&gt;
-&lt;&lt;set $royalty +=1&gt;&gt;
 &lt;&lt;set $guild +=1&gt;&gt;
 &lt;&lt;set $civic -=1&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="&quot;I shall go after darling, on the way back&quot;" tags="" position="770,1446" size="100,100">You leave the shop, heading immediately to the Church. Cheap Ward has one of the massive markets of the city, and you walk through it to reach St. Vedast.
@@ -341,10 +361,10 @@ Lady Strange pierces you with a steely gaze, and you attempt to hold your will a
 [[To the grocer]] or [[To the Church]]
 
 &lt;&lt;nobr&gt;&gt;
-&lt;&lt;set $royalty -=2&gt;&gt;
+&lt;&lt;set $royalty -=1&gt;&gt;
 &lt;&lt;set $guild +=1&gt;&gt;
-&lt;&lt;set $civic +=2&gt;&gt;
-&lt;&lt;set $religion -=2&gt;&gt;
+&lt;&lt;set $civic +=1&gt;&gt;
+&lt;&lt;set $religion -=1&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="Truth" tags="" position="947,1695" size="100,100">&quot;I must apologize my Lady,&quot; you say with a sweeping bow. &quot;I have silk that has been now promised to the Church. It will take me some time to get more, but my lady deserves to know the truth.&quot;
 
 Lady Strange pierces you with a steely gaze, and you attempt to hold your will against a formidable lady. You realize that even with her husband in hiding after betraying the King, she can more than hold her own.
@@ -354,10 +374,10 @@ Lady Strange pierces you with a steely gaze, and you attempt to hold your will a
 [[To the grocer]] or [[To the Church]] 
 
 &lt;&lt;nobr&gt;&gt;
-&lt;&lt;set $royalty +=2&gt;&gt;
-&lt;&lt;set $civic -=2&gt;&gt;
+&lt;&lt;set $royalty +=3&gt;&gt;
+&lt;&lt;set $civic -=1&gt;&gt;
 &lt;&lt;set $guild -=1&gt;&gt;
-&lt;&lt;set $religion +=1&gt;&gt;
+&lt;&lt;set $religion +=2&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="To the grocer" tags="" position="717,1851" size="100,100">The grocer, Pierre Beauchamp, is a strange man. As a foreign-born man, he had very little support from the community and was rejected for years from the Grocers Guild, an organization almost as powerful as your own. 
 
 &quot;Bonjour, mon ami. Perhaps you wish to buy from me? Father Burke mentioned you may want [[a supply of fresh venison]], from the King&#39;s stock, so best not to tell the authorities.&quot;
@@ -380,7 +400,7 @@ Clueless, you race to think of something, anything.
 
 &lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $family -=1&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="Family Middle" tags="" position="2583,171" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="34" name="Guild Middle" tags="" position="2585,278" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="35" name="Religion Middle" tags="" position="2587,388" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="36" name="Royalty Middle" tags="" position="2588,498" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="37" name="Civic Middle" tags="" position="2595,608" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="38" name="a supply of fresh venison" tags="" position="715,2008" size="100,100">You buy your groceries without a word and accept the gift of venison.
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="a supply of fresh venison" tags="" position="715,2007" size="100,100">You buy your groceries without a word and accept the gift of venison.
 
 St. Vedast is a simple parish church, rows reaching up to the altar in the front. The chruch is eerily quiet, as usually there will be some supplicants to see Father Burke.
 
@@ -392,12 +412,12 @@ Clueless, you race to think of something, anything.
 
 &lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $guild +=1&gt;&gt;
-&lt;&lt;set $civic +=2&gt;&gt;
-&lt;&lt;set $royalty -=2&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="&quot;Call for Father Burke!&quot;" tags="" position="1172,1809" size="100,100">You desperately struggle, but the man, without a word, slides the knife across your throat. You die, mere feet away from the altar cloth of St. Vedast.
+&lt;&lt;set $civic +=1&gt;&gt;
+&lt;&lt;set $royalty -=1&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="&quot;Call for Father Burke!&quot;" tags="" position="1172,1809" size="100,100">You desperately struggle, but the man, without a word, slides the knife across your throat. You die, mere feet away from the altar cloth of St. Vedast.
 
 [[Return to life -&gt;To the Church]]
-</tw-passagedata><tw-passagedata pid="40" name="Lie to him" tags="" position="967,2032" size="100,100">&quot;Silk, for the future Queen!&quot; 
+</tw-passagedata><tw-passagedata pid="35" name="Lie to him" tags="" position="967,2032" size="100,100">&quot;Silk, for the future Queen!&quot; 
 
 The knife disappears and a well-built man emerges into your line of sight. He is clearly royal, of noble blood, but he seems to have been running for a few days.
 
@@ -411,12 +431,12 @@ Or [[Reject him]]
 
 &lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $family +=2&gt;&gt;
-&lt;&lt;set $royalty -=1&gt;&gt;
-&lt;&lt;set $civic +=1&gt;&gt;
+&lt;&lt;set $royalty +=1&gt;&gt;
+&lt;&lt;set $civic -=1&gt;&gt;
 &lt;&lt;set $religion -=1&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="&quot;Unhand me you ruffian!&quot;" tags="" position="535,2007" size="100,100">You desperately struggle, but the man, without a word, slides the knife across your throat. You die, mere feet away from the altar cloth of St. Vedast.
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="&quot;Unhand me you ruffian!&quot;" tags="" position="535,2007" size="100,100">You desperately struggle, but the man, without a word, slides the knife across your throat. You die, mere feet away from the altar cloth of St. Vedast.
 
-[[Return to life -&gt;a supply of fresh venison]]</tw-passagedata><tw-passagedata pid="42" name="Offer whatever you have" tags="" position="739,2144" size="100,100">&quot;I have groceries, uhh venison, from the King&#39;s stock!&quot;
+[[Return to life -&gt;a supply of fresh venison]]</tw-passagedata><tw-passagedata pid="37" name="Offer whatever you have" tags="" position="739,2144" size="100,100">&quot;I have groceries, uhh venison, from the King&#39;s stock!&quot;
 
 You fear the man be an authority of the king, a sheriff or customs agent, but the knife disappears and a well-built man enters your vision. He is clearly royal, of noble blood, but he seems to have been running for a few days.
 
@@ -430,9 +450,9 @@ Or [[Reject him]]
 
 &lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $guild +=1&gt;&gt;
-&lt;&lt;set $civic -2&gt;&gt;
+&lt;&lt;set $civic +=2&gt;&gt;
 &lt;&lt;set $royalty+=2&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="you must help me" tags="" position="761,2268" size="100,100">You nod your head, and become inspired looking upon the altar cloth. You find some discarded vestments and place them upon the Earl&#39;s body, hoping to make him a little more inconspicuous. You head out into the open.
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="you must help me" tags="" position="761,2268" size="100,100">You nod your head, and become inspired looking upon the altar cloth. You find some discarded vestments and place them upon the Earl&#39;s body, hoping to make him a little more inconspicuous. You head out into the open.
 
 The walk from St. Vedast to the Thames River is short, merely thrity minutes through the narrow London streets. You can see the gulls over the houses and shops circling the body of water. 
 
@@ -445,9 +465,7 @@ The Earl sniffs indignantly, and you wonder if [[getting rid of him first]] is t
 &lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $guild +=1&gt;&gt;
 &lt;&lt;set $civic -=2&gt;&gt;
-&lt;&lt;set $royalty +=1&gt;&gt;
-&lt;&lt;set $religion +=1&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="Reject him" tags="" position="1037,2258" size="100,100">You shake your head no and he savagely twists your arm until you are once again trapped with a knife in your back.
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="Reject him" tags="" position="1037,2258" size="100,100">You shake your head no and he savagely twists your arm until you are once again trapped with a knife in your back.
 
 &quot;If you will not help me willingly you can be my hostage.&quot; With that, de Mawbry shoves you into the street.
 
@@ -462,9 +480,7 @@ The knife twists in your back, and you wonder if it might be simpler to [[get ri
 &lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $guild -=1&gt;&gt;
 &lt;&lt;set $civic +=2&gt;&gt;
-&lt;&lt;set $royalty -=1&gt;&gt;
-&lt;&lt;set $religion -=1&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="you must come right away" tags="" position="1011,2483" size="100,100">The Earl hisses in your ear to dismiss the lad, but you cannot bear to go onwards without knowing your wife&#39;s condition. Ignoring the knife, you advance towards Simon and beign to follow him, realizing that the Earl has no real will to stab you.
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="you must come right away" tags="" position="1011,2483" size="100,100">The Earl hisses in your ear to dismiss the lad, but you cannot bear to go onwards without knowing your wife&#39;s condition. Ignoring the knife, you advance towards Simon and beign to follow him, realizing that the Earl has no real will to stab you.
 
 A physician, Nate Mason, already is attending to your wife. He has bled her, judging by the large bowl of blood swimming underneath Elizabeth&#39;s left arm. You feel comforted knowing that the doctor seems to have already diagnosed her.
 
@@ -475,10 +491,10 @@ The Earl stumbles out of the room, already interested in his self-preservation. 
 It is [[back towards the St. Vedast]], which means more time with the criminal. Otherwise, you must [[get de Mawbry to the river]] and deal with this later.
 
 &lt;&lt;nobr&gt;&gt;
-&lt;&lt;set $family +=2&gt;&gt;
+&lt;&lt;set $family +=1&gt;&gt;
 &lt;&lt;set $royalty -=1&gt;&gt;
 &lt;&lt;set $civic +=1&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="get rid of the Earl of Nottingham first" tags="" position="1171,2475" size="100,100">You tell Simon to run home and keep the physician there until you arrive. You and de Mawbry make your way towards the docks, hoping to not seem too suspicious. The knife continues to dig into your back.
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="get rid of the Earl of Nottingham first" tags="" position="1171,2469" size="100,100">You tell Simon to run home and keep the physician there until you arrive. You and de Mawbry make your way towards the docks, hoping to not seem too suspicious. The knife continues to dig into your back.
 
 After about half the time there, the Alderman, fellow mercer William Braxton, approaches you. 
 
@@ -490,7 +506,7 @@ The apothecary is [[towards the St. Vedast]], back away from the docks, which me
 &lt;&lt;set $family -=2&gt;&gt;
 &lt;&lt;set $royalty +=1&gt;&gt;
 &lt;&lt;set $civic -=1&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="you must come" tags="" position="667,2497" size="100,100">Ignoring the crisis that currently strides with you, you rush home to your wife. You bound up the stairs to the residence above the shop, the Earl close behind you.
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="you must come" tags="" position="667,2497" size="100,100">Ignoring the crisis that currently strides with you, you rush home to your wife. You bound up the stairs to the residence above the shop, the Earl close behind you.
 
 A physician, Nate Mason, already is attending to your wife. He has bled her, judging by the large bowl of blood swimming underneath Elizabeth&#39;s left arm. You feel comforted knowing that the doctor seems to have already diagnosed her.
 
@@ -501,10 +517,10 @@ The Earl stumbles out of the room, already interested in his self-preservation. 
 It is [[back towards the St. Vedast]], which means more time with the criminal. Otherwise, you must [[get de Mawbry to the river]] and deal with this later.
 
 &lt;&lt;nobr&gt;&gt;
-&lt;&lt;set $family +=2&gt;&gt;
-&lt;&lt;set $royalty -=1&gt;&gt;
+&lt;&lt;set $family +=1&gt;&gt;
+&lt;&lt;set $royalty +=1&gt;&gt;
 &lt;&lt;set $civic +=1&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="getting rid of him first" tags="" position="850,2502" size="100,100">You tell Simon to run home and keep the physician there until you arrive. You and de Mawbry make your way towards the docks, hoping to not seem too suspicious.
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="getting rid of him first" tags="" position="850,2502" size="100,100">You tell Simon to run home and keep the physician there until you arrive. You and de Mawbry make your way towards the docks, hoping to not seem too suspicious.
 
 After about half the time there, the Alderman, fellow mercer William Braxton, approaches you. 
 
@@ -516,7 +532,7 @@ The apothecary is [[towards the St. Vedast]], away from the docks which means mo
 &lt;&lt;set $family -=2&gt;&gt;
 &lt;&lt;set $royalty +=1&gt;&gt;
 &lt;&lt;set $civic -=1&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="back towards the St. Vedast" tags="" position="609,2798" size="100,100">Going back towards St. Vedast gives you a rising panic. Continuing to harbor the Earl is foolish and terrifying. 
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="back towards the St. Vedast" tags="" position="609,2798" size="100,100">Going back towards St. Vedast gives you a rising panic. Continuing to harbor the Earl is foolish and terrifying. 
 
 As you walk back up the street, your fellow mercer, William Braxton, approaches with a face jsut as set with worry lines as your own. 
 
@@ -533,13 +549,15 @@ As you walk back up the street, your fellow mercer, William Braxton, approaches 
 &lt;&lt;elseif $religion &lt;=5&gt;&gt; A you near the apothecary, you see Father Burke billowing towards you. The priest has a look of dread, tailed by the sheriff who is looking at Thomas de Mawbry with relish. 
 
 &quot;I am sorry, my lord Earl, but you must go with this man. God was not kind to you on this day.&quot; You feel as if you have failed the Earl, but nevertheless you have a more pressing issue, your wife, to deal with. [[Proceed to the apothecary]]
+
+Or perhaps you [[wish to conclude your journey? -&gt;The Ending]] 
 &lt;&lt;nobr&gt;&gt;
-&lt;&lt;set $religion -=2&gt;&gt;
+&lt;&lt;set $religion -=1&gt;&gt;
 &lt;&lt;set $royalty -=2&gt;&gt;
-&lt;&lt;set $civic +=3&gt;&gt;
+&lt;&lt;set $civic +=2&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="50" name="get de Mawbry to the river" tags="" position="858,2718" size="100,100">As you advance, you can see the river just ahead. A stiff breeze blows your hair, and a ship&#39;s mast rises up in the distance. 
+</tw-passagedata><tw-passagedata pid="45" name="get de Mawbry to the river" tags="" position="858,2718" size="100,100">As you advance, you can see the river just ahead. A stiff breeze blows your hair, and a ship&#39;s mast rises up in the distance. 
 
 Before you reach the docks, with your stomach dropping you notice a stern guard, once again trailing a fine lady.
 
@@ -547,11 +565,11 @@ Before you reach the docks, with your stomach dropping you notice a stern guard,
 
 You know it is a bad idea, and you can take a side street to avoid speaking to her.
 
-[[Allow him to approach her]] or [[Plead with him to keep going]]</tw-passagedata><tw-passagedata pid="51" name="towards the St. Vedast" tags="" position="1271,2755" size="100,100">Going back towards St. Vedast gives you a rising panic. Continuing to harbor the Earl is foolish and terrifying. 
+[[Allow him to approach her]] or [[Plead with him to keep going]]</tw-passagedata><tw-passagedata pid="46" name="towards the St. Vedast" tags="" position="1271,2755" size="100,100">Going back towards St. Vedast gives you a rising panic. Continuing to harbor the Earl is foolish and terrifying. 
 
 But as you begin to leave Alderman Braxton, he questions who the man next to you is.
 
-&lt;&lt;if $guild &lt;5&gt;&gt; You attempt to lie, saying he is a potential new apprentice or customer. But you realzie that nothing can get past Braxton. The guild is strict in its record-keeping, and a man as powerful as this would know any new member of the guild, or its consumers in Cheap.
+&lt;&lt;if $guild&lt;5&gt;&gt; You attempt to lie, saying he is a potential new apprentice or customer. But you realzie that nothing can get past Braxton. The guild is strict in its record-keeping, and a man as powerful as this would know any new member of the guild, or its consumers in Cheap.
 
 He sights the sheriff, heading towards St. Vedast, and demands that the man you are attemtping to shield be questioned. The sheriff takes de Mawbry and leads him off to be interrogated. With him gone, you can now take care of your wife. [[Proceed to the apothecary]]
 &lt;&lt;nobr&gt;&gt;
@@ -559,13 +577,17 @@ He sights the sheriff, heading towards St. Vedast, and demands that the man you 
 &lt;&lt;set $royalty -=2&gt;&gt;
 &lt;&lt;set $civic +=3&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
-&lt;&lt;elseif $guild &gt;=5&gt;&gt; You tell the truth, explaining the journey from St. Vedast to here, and showing the Alderman the man now standing next to you. With a sigh, Braxton offers to take de Mawbry for you, as the guild loyalties run deep, while you go and retrieve medicine from the apothecary. [[Proceed to the apothecary]] 
+&lt;&lt;elseif $guild&gt;=5&gt;&gt; You tell the truth, explaining the journey from St. Vedast to here, and showing the Alderman the man now standing next to you. With a sigh, Braxton offers to take de Mawbry for you, as the guild loyalties run deep, while you go and retrieve medicine from the apothecary. [[Proceed to the apothecary]] 
+
+Or perhaps you [[wish to conclude your journey? -&gt;The Ending]] 
+
 &lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $religion +=2&gt;&gt;
 &lt;&lt;set $royalty +=2&gt;&gt;
-&lt;&lt;set $civic -=3&gt;&gt;
+&lt;&lt;set $civic -=2&gt;&gt;
 &lt;&lt;set $guild +=2&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="get the Earl to the river" tags="" position="1042,2707" size="100,100">&lt;&lt;if $civic&lt;4=&gt;&gt; The Thames is just at the end of the street. Dockworkers and sailors bustle about loading and unloading goods.
+&lt;&lt;/nobr&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="get the Earl to the river" tags="" position="1042,2707" size="100,100">&lt;&lt;if $civic&lt;4=&gt;&gt; The Thames is just at the end of the street. Dockworkers and sailors bustle about loading and unloading goods.
 
 Just as the docks appear, you see the sheriff, flanked by a troop of roayl guards, walking down the street. They spot you, and at first ignore the shuffling man beside you. But as you get closer to intersecting with them, more and more of the guards glance over with suspicion. You start to drift slighlty to the side, pretending to not be associated with the man at next to you.
 
@@ -580,7 +602,7 @@ Finally, one of the guards come over and tap the Earl&#39;s shoulder. No amount 
 Just as the docks appear, you see the sheriff, flanked by a troop of roayl guards, walking down the street. They spot you, and at first ignore the shuffling man beside you. But as you get closer to intersecting with them, more and more of the guards glance over with suspicion. You start to drift slighlty to the side, pretending to not be associated with the man at next to you.
 
 Fortunately, your reputation as an established member of civil society gives the guards pause, as if nervous to even disturb your casual stroll towards the river by questioning a random urchin. The guards walk on, and you get the Earl of Nottingham to the docks. You see Father Burke with a transport barge, ready to take the Earl to the king and away from the city&#39;s ambitious agents. You can now help your wife, who continues to be ill. [[Proceed to the apothecary]] 
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="53" name="Allow him to approach her" tags="" position="810,2870" size="100,100">&lt;&lt;if $royalty &gt;5&gt;&gt; The Lady Strange sees you approaching, and instantly recognizes her husband. She heads for the same side street you wanted to take, and you realize she is leading you away from a massive troop of royal soldiers led by the sheriff. They head for St. Vedast, no doubt to finally imprison the man at your shoulder. Lady Strange gets you to the docks without a word, and seeing Father Burke standing next to a transport barge, she then glides away, a final saving act for her husband. With the Earl of Nottingham away, you can now turn your attention to retrieving medicine from the apothecary. [[Proceed to the apothecary]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="Allow him to approach her" tags="" position="810,2870" size="100,100">&lt;&lt;if $royalty &gt;5&gt;&gt; The Lady Strange sees you approaching, and instantly recognizes her husband. She heads for the same side street you wanted to take, and you realize she is leading you away from a massive troop of royal soldiers led by the sheriff. They head for St. Vedast, no doubt to finally imprison the man at your shoulder. Lady Strange gets you to the docks without a word, and seeing Father Burke standing next to a transport barge, she then glides away, a final saving act for her husband. With the Earl of Nottingham away, you can now turn your attention to retrieving medicine from the apothecary. [[Proceed to the apothecary]]
 &lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $religion +=2&gt;&gt;
 &lt;&lt;set $royalty +=2&gt;&gt;
@@ -588,14 +610,15 @@ Fortunately, your reputation as an established member of civil society gives the
 &lt;&lt;/nobr&gt;&gt;
 &lt;&lt;elseif $royalty &lt;=5&gt;&gt; The Lady Strange sees you approaching and instantly recognizes her husband. But with a cold gleam in her eye she beckons him forward, and de Mawbry sees nothing of the massive troop of royal soldiers he is about to intersect. The soldiers head for St. Vedast, not yet seeing that their target stumbles in front of them. With a strangled cry, the Lady Strange points to her husband and the sheriff claps irons to de Mawbry. You once again wonder how much inner strength this woman does have. With de Mawbry gone, you can now turn attention to retrieving the goods from the apothecary [[Proceed to the apothecary]]
 
+Or perhaps you [[wish to conclude your journey? -&gt;The Ending]] 
 &lt;&lt;nobr&gt;&gt;
-&lt;&lt;set $religion -=2&gt;&gt;
+&lt;&lt;set $religion -=1&gt;&gt;
 &lt;&lt;set $royalty -=2&gt;&gt;
-&lt;&lt;set $civic +=3&gt;&gt;
+&lt;&lt;set $civic +=2&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
-</tw-passagedata><tw-passagedata pid="54" name="Plead with him to keep going" tags="" position="938,2870" size="100,100">&lt;&lt;if $family &gt;5&gt;&gt; The Earl of Nottingham gives you a strange look, but acquiesces. 
+</tw-passagedata><tw-passagedata pid="49" name="Plead with him to keep going" tags="" position="938,2870" size="100,100">&lt;&lt;if $family &gt;5&gt;&gt; The Earl of Nottingham gives you a strange look, but acquiesces. 
 &quot;You chose your family over a noble, even one with his own dangerous cause. I should not include my family in this either.&quot;
 
 With that, the Earl turns away, walking towards the docks and pretneding that Lady Strange is not there. You sigh with relief, hoping you can now assist your wife with her ailment.
@@ -609,12 +632,15 @@ Thomas de Mawbry leaps onto a transport barge, under the critical eye of Father 
 &lt;&lt;set $civic -=3&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
 &lt;&lt;elseif $family &lt;=5&gt;&gt; The Lady Strange sees you approaching and instantly recognizes her husband. But with a cold gleam in her eye she beckons him forward, and de Mawbry sees nothing of the massive troop of royal soldiers he is about to intersect. The soldiers head for St. Vedast, not yet seeing that their target stumbles in front of them. With a strangled cry, the Lady Strange points to her husband and the sheriff claps irons to de Mawbry. You once again wonder how much inner strength this woman does have, and if she chose the safety of her family over the traitorous Earl. With de Mawbry gone, you can now turn attention to retrieving the goods from the apothecary [[Proceed to the apothecary]]
+
+Or perhaps you [[wish to conclude your journey? -&gt;The Ending]] 
+
 &lt;&lt;nobr&gt;&gt;
-&lt;&lt;set $religion -=2&gt;&gt;
+&lt;&lt;set $religion -=1&gt;&gt;
 &lt;&lt;set $royalty -=2&gt;&gt;
-&lt;&lt;set $civic +=3&gt;&gt;
+&lt;&lt;set $civic +=2&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="55" name="Proceed to the apothecary" tags="" position="873,3085" size="100,100">Lyon&#39;s Apothecary, a squat building with two chimneys constantly smoking. You hope that Master Lyon has some sort of cure to give to your wife. Surely medicine has advanced by leaps and bounds since 1348?
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="50" name="Proceed to the apothecary" tags="" position="873,3085" size="100,100">Lyon&#39;s Apothecary, a squat building with two chimneys constantly smoking. You hope that Master Lyon has some sort of cure to give to your wife. Surely medicine has advanced by leaps and bounds since 1348?
 
 Master Lyon is of no help. He offers you a mixture of flower root and treacle, to &quot;ease the pain.&quot; But he does mention that the Flemish may have a more potent fix.
 
@@ -622,19 +648,18 @@ As you are leaving the apothecary, father Burke sweeps towards you. He makes no 
 
 &quot;Hugh, I have a small task for you, if you are available. Oh, and do not worry,&quot; he says with a twinkle in his eye, &quot;This time I won&#39;t be forcing noble strangers upon you.&quot;
 
-[[Keep searching for a cure]] or [[Assist Father Burke]]</tw-passagedata><tw-passagedata pid="56" name="Keep searching for a cure" tags="" position="631,3222" size="100,100">The Flemish, hailing from the Low Countries on the continent, have always been reliable traders of your linen and silk, and you now pray that the merchants from abroad have this mysterious cure.
+[[Keep searching for a cure]] or [[Assist Father Burke]]</tw-passagedata><tw-passagedata pid="51" name="Keep searching for a cure" tags="" position="631,3222" size="100,100">The Flemish, hailing from the Low Countries on the continent, have always been reliable traders of your linen and silk, and you now pray that the merchants from abroad have this mysterious cure.
 
 The Flemish have warehouses and stores along the waterfront. Despite being essential to the city&#39;s economy, the Flemish have been shunned from the oppurtunity to join civil society. 
 
-You can speak to your normal contact, [[Michelle WORK]], or [[find another trader WORK]] perhaps more equipped to have medicial supplements.
+You can speak to your normal contact, [[Michelle]], or [[find another trader]] perhaps more equipped to have medicial supplements.
 
 
 &lt;&lt;nobr&gt;&gt;
-&lt;&lt;set $family +=2&gt;&gt;
+&lt;&lt;set $family +=1&gt;&gt;
 &lt;&lt;set $guild +=1&gt;&gt;
 &lt;&lt;set $civic -=2&gt;&gt;
-&lt;&lt;set $religion -=2&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="57" name="Assist Father Burke" tags="" position="1292,3076" size="100,100">You trudge back up to St. Vedast, wondering what fresh horror the priest will lay upon you. 
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="Assist Father Burke" tags="" position="1292,3076" size="100,100">You trudge back up to St. Vedast, wondering what fresh horror the priest will lay upon you. 
 
 Father Burke turns to you, and with a conspiratorial grin fluorishes a book in front of you. The front is Latin, with a large imprint of a holy man on the cover.
 
@@ -651,10 +676,38 @@ You shake your head, and he seems unsurprised.
 &lt;&lt;set $guild -=1&gt;&gt;
 &lt;&lt;set $civic +=2&gt;&gt;
 &lt;&lt;set $religion +=2&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="58" name="Michelle WORK" tags="" position="513,3351" size="100,100">[[Ask some questions WORK]] or [[Pay up, pray a lot WORK]]</tw-passagedata><tw-passagedata pid="59" name="find another trader WORK" tags="" position="706,3372" size="100,100">You head down the docks, but you sense that something is wrong. The street is quiet, except for a couple of men approaching you menacingly
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="53" name="Michelle" tags="" position="513,3351" size="100,100">Michelle embraces you with his normal joviality. You chat quickly, knowing that your wife may be running out of time to combat the plague or whatever it is.
+
+Michelle offers you a small vial, guaranteeing &quot;the elixir shall bring anyone back to life.&quot;
 
 
-[[Death Be Upon Thee -&gt;Keep searching for a cure]] </tw-passagedata><tw-passagedata pid="60" name="Yes, Father" tags="" position="1144,3236" size="100,100">&quot;I hold in my hands the book of John Wycliffe. You will have remembered his death was celebrated in the final year of your apprenticeship to Organ.&quot;
+You could [[ask more questions -&gt;Ask some questions]], but that may insult the man, and ruin a good guild contact.
+
+Or you could just [[Pay up, pray a lot]]
+
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;set $guild +=3&gt;&gt;
+&lt;&lt;set $civic +=1&gt;&gt;
+&lt;&lt;set $religion -=2&gt;&gt;
+&lt;&lt;set $royalty +=1&gt;&gt;
+&lt;&lt;set $family +=2&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="54" name="find another trader" tags="" position="706,3372" size="100,100">You head down the docks, but you sense that something is wrong. The street is quiet, except for a couple of men approaching you menacingly.
+
+They are clearly urchins, and your flashy garb must have caught their attention. Perhaps Michelle might be the best answer...
+
+In a flash, and as you turn back up the street, a heavy object hits the back of your head. Dazed and fallen, the thugs grab your money purse and flee.
+
+Choosing to break your business relatuonship with Michelle has its consequences.
+
+[[Thy Name is Failure -&gt;Keep searching for a cure]] 
+
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;set $guild -=3&gt;&gt;
+&lt;&lt;set $civic -=1&gt;&gt;
+&lt;&lt;set $religion +=2&gt;&gt;
+&lt;&lt;set $royalty +=1&gt;&gt;
+&lt;&lt;set $family -=2&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="55" name="Yes, Father" tags="" position="1144,3236" size="100,100">&quot;I hold in my hands the book of John Wycliffe. You will have remembered his death was celebrated in the final year of your apprenticeship to Organ.&quot;
 
 Your insides twist. This book is heretical and sacreligious. A group of Wycliffe&#39;s followers, the Lollards continue to preach this nonsense against the Church.
 
@@ -662,34 +715,211 @@ You stare at Burke, wondering how this book has fallen into his possession.
 
 &quot;Hugh, you needn&#39;t know where or how this book is here, but [[it must be taken out of this city]].&quot;
 
-[[&quot;There is no way I will harbor another crime for you.&quot; WORK]]
+[[&quot;There is no way I will harbor another crime for you.&quot;]]
 
 &lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $guild -=1&gt;&gt;
 &lt;&lt;set $civic =+1&gt;&gt;
 &lt;&lt;set $religion +=2&gt;&gt;
 &lt;&lt;set $royalty -=1&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="61" name="Yes, Father (fingers crossed)" tags="" position="1415,3243" size="100,100">Father Burke looks at you with disapprovl. &quot;Tsk tsk, Hugh. The Lord is watching. This sin cannot be pardoned.&quot;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="56" name="Yes, Father (fingers crossed)" tags="" position="1415,3243" size="100,100">Father Burke looks at you with disapprovl. &quot;Tsk tsk, Hugh. The Lord is watching. This sin cannot be pardoned.&quot;
 
-[[You&#39;ll actually mean it this time -&gt;Assist Father Burke]] </tw-passagedata><tw-passagedata pid="62" name="it must be taken out of this city" tags="" position="1150,3372" size="100,100">&quot;You must go to Southwark. Never fear that place is disugsting, and a man of your repute does not have to enter. I simply ask you cross the bridge to hand the book off to a fellow believer of the Church.&quot;
+[[You&#39;ll actually mean it this time -&gt;Assist Father Burke]] </tw-passagedata><tw-passagedata pid="57" name="it must be taken out of this city" tags="" position="1150,3372" size="100,100">&quot;You must go to Southwark. Never fear that place is disugsting, and a man of your repute does not have to enter. I simply ask you cross the bridge to hand the book off to a fellow believer of the Church.&quot;
 
 You do not know whether or not to beleieve that Burke is still a true man of the faith, but you realize that by possessing this information you are now at risk. You think of your poor wife, and think that spending your life in jail will not honor her. 
 
 The book is now tucked in your waistcoat, and you once again enter the street, this time with no cantankerous nobel at your back, but just as dangerous an assignment. 
 
-Despite agreeing Burke, [[you could dispose of the book. WORK]] Otherwise, [[to the bridge you go WORK]].
+Despite agreeing Burke, [[you could dispose of the book.]] Otherwise, [[to the bridge you go]].
 
 &lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $religion +=2&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="63" name="&quot;There is no way I will harbor another crime for you.&quot; WORK" tags="" position="907,3300" size="100,100">[[Take the book -&gt;to the bridge you go WORK]] or [[Flee, aid your wife! -&gt;Keep searching for a cure]]</tw-passagedata><tw-passagedata pid="64" name="you could dispose of the book. WORK" tags="" position="1060,3715" size="100,100">[[Keep searching for a cure]] </tw-passagedata><tw-passagedata pid="65" name="to the bridge you go WORK" tags="" position="1287,3638" size="100,100">[[Run from the guards! WORK]] or [[Speak to the sheriff WORK]]</tw-passagedata><tw-passagedata pid="66" name="Ask some questions WORK" tags="" position="350,3208" size="100,100">[[Anything for Elizabeth -&gt;Pay up, pray a lot WORK]] or [[This will not help, let&#39;s go see Father Burke -&gt;Assist Father Burke]]</tw-passagedata><tw-passagedata pid="67" name="Pay up, pray a lot WORK" tags="" position="446,3495" size="100,100">[[Keep the mercury for yourself WORK]] or [[Bring the mercury to Alderman Braxton WORK]]</tw-passagedata><tw-passagedata pid="68" name="Keep the mercury for yourself WORK" tags="" position="310,3651" size="100,100">[[Give it to the physician WORK]]</tw-passagedata><tw-passagedata pid="69" name="Bring the mercury to Alderman Braxton WORK" tags="" position="584,3646" size="100,100">[[Keep a portion for yourself WORK]] or [[Give it all to Braxton WORK]]</tw-passagedata><tw-passagedata pid="70" name="Keep a portion for yourself WORK" tags="" position="521,3811" size="100,100">[[Give it to the physician WORK]] </tw-passagedata><tw-passagedata pid="71" name="Give it all to Braxton WORK" tags="" position="662,3801" size="100,100">[[See if his wife recovers WORK]] or [[Return home WORK]]</tw-passagedata><tw-passagedata pid="72" name="Give it to the physician WORK" tags="" position="355,3822" size="100,100">LOOP
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="58" name="&quot;There is no way I will harbor another crime for you.&quot;" tags="" position="900,3318" size="100,100">Father Burke looks defetaed, and his pleading look starts to nurn into your soul, as if the Lord himself is questioning your loyalties. 
 
-[[Wife result WORK]]</tw-passagedata><tw-passagedata pid="73" name="See if his wife recovers WORK" tags="" position="544,3977" size="100,100">[[Assist Father Burke]] or [[The Ending WORK]] </tw-passagedata><tw-passagedata pid="74" name="Return home WORK" tags="" position="818,4004" size="100,100">[[Assist Father Burke]] or [[The Ending WORK]] </tw-passagedata><tw-passagedata pid="75" name="Run from the guards! WORK" tags="" position="1203,3806" size="100,100">[[Swim WORK]] or [[Risk the bridge WORK]]</tw-passagedata><tw-passagedata pid="76" name="Speak to the sheriff WORK" tags="" position="1411,3797" size="100,100">[[Accept the escort WORK]] or [[go it alone WORK]]</tw-passagedata><tw-passagedata pid="77" name="Swim WORK" tags="" position="1028,3958" size="100,100">FAILURE
+Hmmm, your soul or your life. A simple choice.
 
-[[to the bridge you go WORK]] </tw-passagedata><tw-passagedata pid="78" name="Risk the bridge WORK" tags="" position="1251,3964" size="100,100">FAILURE
+[[Take the book -&gt;to the bridge you go]] or [[Flee, aid your wife! -&gt;Keep searching for a cure]]
 
-[[to the bridge you go WORK]] </tw-passagedata><tw-passagedata pid="79" name="Wife result WORK" tags="" position="317,4052" size="100,100">[[Assist Father Burke]] or [[The Ending WORK]]</tw-passagedata><tw-passagedata pid="80" name="go it alone WORK" tags="" position="1530,3947" size="100,100">[[Head over the bridge WORK]]</tw-passagedata><tw-passagedata pid="81" name="Accept the escort WORK" tags="" position="1402,3947" size="100,100">[[Take the sheriff&#39;s man with you WORK]] or [[go it alone WORK]]  it alone]]</tw-passagedata><tw-passagedata pid="82" name="Head over the bridge WORK" tags="" position="1549,4099" size="100,100">Loop wait for the agent
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;set $civic +=1&gt;&gt;
+&lt;&lt;set $religion -=1&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="59" name="you could dispose of the book." tags="" position="1060,3715" size="100,100">You start to walk towards the bridge, grappling between your duty as a servant of the city and man committed to the Church. 
 
-[[Give the book over WORK]]</tw-passagedata><tw-passagedata pid="83" name="Give the book over WORK" tags="" position="1475,4257" size="100,100">[[Keep searching for a cure]] or [[The Ending WORK]] </tw-passagedata><tw-passagedata pid="84" name="Take the sheriff&#39;s man with you WORK" tags="" position="1309,4164" size="100,100">[[Keep searching for a cure]] or [[The Ending WORK]] </tw-passagedata></tw-storydata></div>
+As the London Bridge begins to loom ahead of you, you feel more and more fear, and ovrwhelmed you chuck the heretical book into the River Thames, joining all the other trash of London.
+
+With your conscience clear and your body free, you can now turn to finally helping your wife.
+
+[[Keep searching for a cure]] 
+
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;set $guild +=2&gt;&gt;
+&lt;&lt;set $civic +=1&gt;&gt;
+&lt;&lt;set $religion -=2&gt;&gt;
+&lt;&lt;set $royalty +=2&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="60" name="to the bridge you go" tags="" position="1286,3638" size="100,100">As you head to the bridge, you see the sheriff marching up the street again, this time with more royal guards in a retinue. 
+
+&lt;&lt;if $civic&gt;5&gt;&gt; You are confident that your reputation in the city will save you from any harrassment from the sheriff, but the royal guards seem nervous, perhaps remembering you from earlier with your last little problem... It might be better to make a break, get rid of the book fast as possible.
+
+&lt;&lt;elseif $civic&lt;=5&gt;&gt; Your reputation has declined today, and you fear the sheriff may not be so lenient as you pass him by. It may be better to run and get rid of the book as fast as possible, instaed of facing the sheriff head-on.
+&lt;&lt;/if&gt;&gt;
+
+[[Run from the guards!]] or [[Speak to the sheriff]]
+</tw-passagedata><tw-passagedata pid="61" name="Ask some questions" tags="" position="350,3208" size="100,100">&quot;Um, Michelle, what is this strange potion? And why is it silver?&quot;
+
+A sly smile captures Michelle&#39;s face. &quot;Well, there may be a slight amount of mercury. Actually, it&#39;s all mercury.&quot;
+
+Well, that&#39;s a hard one. Mercury is insisted upon as a miracle drug for some, but laughed at by others. You could go [[assist Father Burke -&gt;Assist Father Burke]] and wait for your wife to be cured, [[go to her now-&gt;Wife result]], or [[pay for the mercury-&gt;Pay up, pray a lot]], as anything will help.
+
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;set $guild -=1&gt;&gt;
+&lt;&lt;set $civic -=1&gt;&gt;
+&lt;&lt;set $royalty -=1&gt;&gt;
+&lt;&lt;set $family -=2&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+
+&lt;&lt;set $wifefate to random(1,100)&gt;&gt;</tw-passagedata><tw-passagedata pid="62" name="Pay up, pray a lot" tags="" position="446,3495" size="100,100">You are rushing home, hoping you have the cure to save your wife.
+
+As you turn up the street, you see Alderman Braxton, who you had promised some of the cure. The mercury could save your wife, or you could be hastening her death. 
+
+[[You could run past him-&gt;Keep the mercury for yourself]], and potentially harm your standing both in the community and the guild.
+
+But it is [[the guild and your trade-&gt;Bring the mercury to Alderman Braxton]], and this could be too strong of a betrayal to forgive.
+
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;set $guild +=1&gt;&gt;
+&lt;&lt;set $civic -=1&gt;&gt;
+&lt;&lt;set $religion +=1&gt;&gt;
+&lt;&lt;set $royalty -=1&gt;&gt;
+&lt;&lt;set $family +=2&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="63" name="Keep the mercury for yourself" tags="" position="349,3641" size="100,100">You run past Braxton, ignoring his indignation. 
+
+You get home and find your wife unconscious, and you hope the mercury potion will help.
+
+[[Give it to the physician-&gt;Give it to the physician]]
+
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;set $guild -=2&gt;&gt;
+&lt;&lt;set $civic -=1&gt;&gt;
+&lt;&lt;set $religion -=1&gt;&gt;
+&lt;&lt;set $family +=2&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+
+&lt;&lt;set $wifedeath=1&gt;&gt;</tw-passagedata><tw-passagedata pid="64" name="Bring the mercury to Alderman Braxton" tags="" position="584,3646" size="100,100">Braxton looks grateful as you bring him the potion. He offers to [[let you keep some-&gt;Keep a portion for yourself]], but the vial is very small. [[Giving him all of it-&gt;Give it all to Braxton]] would definitely lead to glory in the guild.
+
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;set $guild +=1&gt;&gt;
+&lt;&lt;set $civic +=1&gt;&gt;
+&lt;&lt;set $religion +=1&gt;&gt;
+&lt;&lt;set $family -=2&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="65" name="Keep a portion for yourself" tags="" position="526,3808" size="100,100">Braxton takes most of the potion, leaving you some precious drops. You have chosen trade over family: pray it does not come back to harm you.
+
+Once home, you bring the vial into the bedroom, and begin to send those prayers into heaven.
+
+[[Give it to the physician]] 
+&lt;&lt;set $wifedeath=1&gt;&gt;</tw-passagedata><tw-passagedata pid="66" name="Give it all to Braxton" tags="" position="669,3822" size="100,100">Braxton takes all of the potion, leaving you nothing. You have chosen trade over family: pray it does not come back to harm you.
+
+Once home, you bring the empty hands into the bedroom, and begin to send those prayers into heaven.
+
+[[Your wife&#39;s health -&gt;Wife result]]
+
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;set $guild +=2&gt;&gt;
+&lt;&lt;set $civic +=1&gt;&gt;
+&lt;&lt;set $family -=2&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="67" name="Give it to the physician" tags="" position="353,3773" size="100,100">Your wife is unresponsive, but the physician pours more of the potion into her mouth. 
+
+&lt;&lt;if $wifedeath is 4&gt;&gt; Your wife is on the brink, and you do not know if your prior choices will make or break [[her recovery-&gt;Wife result]] from what is surely the plague.
+&lt;&lt;else&gt;&gt; Nothing much happens. But you hope the potion is working. [[Keep Waiting-&gt;Give it to the physician]]
+&lt;&lt;set $wifedeath += 1&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;set $wifefate to random(1,100)&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="Run from the guards!" tags="" position="1203,3806" size="100,100">You panic, breathlessly sprinting past the guards. You hear a shout, and the guards begin to collect at the front of London bridge. 
+
+You could try to [[barrel past the guards-&gt;Risk the bridge]], or try to [[swim-&gt;Swim]]: your waistcoat is of your own linen stock, and you kknow it is light and buoyant.
+
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;set $civic -=1&gt;&gt;
+&lt;&lt;set $religion +=1&gt;&gt;
+&lt;&lt;set $royalty -=1&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="69" name="Speak to the sheriff" tags="" position="1411,3797" size="100,100">&quot;Ah, Master Bradley,&quot; the sheriff says with a sweeping bow. &quot;Where are you going as the day passes into night?&quot;
+
+&quot;Southwark,&quot; you say tersely.
+
+&quot;Mmmm a dangerous place. Perhaps you would like an escort across the birdge?&quot;
+
+[[Accept the escort]] or [[go it alone]]
+
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;set $civic +=1&gt;&gt;
+&lt;&lt;set $religion -=1&gt;&gt;
+&lt;&lt;set $royalty +=1&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="70" name="Swim" tags="" position="1028,3958" size="100,100">Silly you, you are a mercer in the city of London, and live a comfortable lifestyle. 
+
+You are out of shape and the river is a cruel beast. You do not make it 50 meters befroe you drown into the brown murky depths.
+
+[[to the bridge you go]] </tw-passagedata><tw-passagedata pid="71" name="Risk the bridge" tags="" position="1159,4025" size="100,100">You run straight for the guards, thinking they would surely not attack a prominent citizen. And indeed they move aside. As you run across you look back and slip on a wet surface. Stumbling, you grab the rail but your momentum springs you over the sode, tumbling to your death in the dark, murky waters of the Thames.
+
+[[to the bridge you go]] </tw-passagedata><tw-passagedata pid="72" name="Wife result" tags="" position="440,4055" size="100,100">&lt;&lt;if $wifefate&gt;65 &gt;&gt; Your wife has awakened! Her eyes fly open, and you give thanks to God for this miracle. It is unknown if she will survive going forward, but this small miracle will give you some more time to talk to her and lend her your strength.
+
+You may [[continue your journey-&gt;Assist Father Burke]], or [[end it-&gt;The Ending]] with such a joyous event. 
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;set $family +=1&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+
+
+&lt;&lt;elseif $wifefate&lt;64 &gt;&gt; Your wife does not open her eyes, and with a deep sadness you realize that she will never awake. you now wonder if all your adventures up to this point might have taken too long for the miracle cure to work, or if it would ever work at all.
+
+You can [[end your journey-&gt;The Ending]], or try to find success in [[other ventures-&gt;Assist Father Burke]].
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;set $family -=2&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+</tw-passagedata><tw-passagedata pid="73" name="go it alone" tags="" position="1511,3943" size="100,100">You head over the bridge, with no trouble but you wonder if the agent is dangerous and if perhaps the guards should have stayed with you.
+
+Despite the hesitations, you must now wait. 
+
+[[Wait for the agent]]
+
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;set $civic -=1&gt;&gt;
+&lt;&lt;set $religion -=1&gt;&gt;
+&lt;&lt;set $royalty +=1&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+
+&lt;&lt;set $agent=1&gt;&gt;</tw-passagedata><tw-passagedata pid="74" name="Accept the escort" tags="" position="1337,4014" size="100,100">You cross the birdge harmlessly, and you make it to the other side. The royal guards offer to stay with you, and you cannot help but wonder if protection might be good for this mystery amn you must meet. The Wycliffe book continues to weigh on your soul.
+
+[[Take the sheriff&#39;s man with you.-&gt;Wait for the agent]]
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;set $civic +=1&gt;&gt;
+&lt;&lt;set $religion -=1&gt;&gt;
+set $royalty +=1&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+
+&lt;&lt;set $agent=1&gt;&gt;</tw-passagedata><tw-passagedata pid="75" name="Wait for the agent" tags="" position="1549,4099" size="100,100">&lt;&lt;if $agent is 4&gt;&gt; The agent arrives and begins to size up the situation, trying to determine whether or not he approaches. With a final sigh, as if he knows he must retrieve the heresy in your pocket, he walks over to you.
+[[Give the book over]] 
+&lt;&lt;else&gt;&gt; You see nothing, but guards at the bridge are looking nervous as you pace about, and you fear that soon there may be conflict.
+[[Continue waiting-&gt;Wait for the agent]]
+&lt;&lt;set $agent+=1&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;set $agentcapture to random(1,100)&gt;&gt;</tw-passagedata><tw-passagedata pid="76" name="Give the book over" tags="" position="1384,4252" size="100,100">&lt;&lt;if $agentcapture &gt;50&gt;&gt; The agent heads towards you and you slowly remove the book from your waistcoat. As if on cue, the guards rush over, screaming and yelling at Father Burke&#39;s mysterious agent. 
+
+They grab him, dragging him back across to the Tower of London for interrogation. You are left untouched. Stunned, realizing you have failed Father Burke, you now feel unsure how you stand with both the Church and the city.
+
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;set $civic +=1&gt;&gt;
+&lt;&lt;set $religion -=1&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+
+[[Keep searching for a cure]] or [[The Ending]] 
+&lt;&lt;elseif $agentcapture &lt;49&gt;&gt; The agent heads towards you and waves in greeting. The guards stay back, and you hand the book over. He nods, confirming that it is indeed Wycliffe&#39;s book and without a word departs. You have done your duty for Father Burke but you have no clue to what end.
+&lt;&lt;nobr&gt;&gt;
+&lt;&lt;set $civic -=1&gt;&gt;
+&lt;&lt;set $religion +=1&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+
+[[Keep searching for a cure]] or [[The Ending]] 
+&lt;&lt;/if&gt;&gt;</tw-passagedata></tw-storydata></div>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
 	if(document.documentElement.getAttribute("data-init")==="loading"){!function(window,document,jQuery,undefined){"use strict";function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,r=Array(e.length);t<e.length;t++)r[t]=e[t];return r}return Array.from(e)}var _createClass=function(){function e(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,r,n){return r&&e(t.prototype,r),n&&e(t,n),t}}(),_slicedToArray=function(){function e(e,t){var r=[],n=!0,a=!1,i=undefined;try{for(var o,s=e[Symbol.iterator]();!(n=(o=s.next()).done)&&(r.push(o.value),!t||r.length!==t);n=!0);}catch(e){a=!0,i=e}finally{try{!n&&s.return&&s.return()}finally{if(a)throw i}}return r}return function(t,r){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,r);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},Alert=function(){function e(e,t,r,n){var a="fatal"===e,i="Apologies! "+(a?"A fatal":"An")+" error has occurred.";i+=a?" Aborting.":" You may be able to continue, but some parts may not work properly.",null==t&&null==r||(i+="\n\nError",null!=t&&(i+=" ["+t+"]"),i+=null!=r?": "+r.replace(/^(?:(?:uncaught\s+(?:exception:\s+)?)?error:\s+)+/i,"")+".":": unknown error."),"object"===("undefined"==typeof n?"undefined":_typeof(n))&&n.stack&&(i+="\n\nStack Trace:\n"+n.stack),window.alert(i)}function t(t,r,n){e(null,t,r,n)}function r(t,r,n){e("fatal",t,r,n)}return function(e){window.onerror=function(n,a,i,o,s){"complete"===document.readyState?t(null,n,s):(r(null,n,s),window.onerror=e,"function"==typeof window.onerror&&window.onerror.apply(this,arguments))}}(window.onerror),Object.freeze(Object.defineProperties({},{error:{value:t},fatal:{value:r}}))}();!function(){function e(e,t){var a=String(e);switch(t){case"start":return a&&r.test(a)?a.replace(r,""):a;case"end":return a&&n.test(a)?a.replace(n,""):a;default:throw new Error('_trimFrom called with incorrect where parameter value: "'+t+'"')}}function t(e,t){var r=Number.parseInt(e,10)||0;if(r<1)return"";var n="undefined"==typeof t?"":String(t);for(""===n&&(n=" ");n.length<r;){var a=n.length,i=r-a;n+=a>i?n.slice(0,i):n}return n.length>r&&(n=n.slice(0,r)),n}var r=/^[\s\u00A0\uFEFF][\s\u00A0\uFEFF]*/,n=/[\s\u00A0\uFEFF][\s\u00A0\uFEFF]*$/;Array.prototype.includes||Object.defineProperty(Array.prototype,"includes",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includes called on null or undefined");if(0===arguments.length)return!1;var e=this.length>>>0;if(0===e)return!1;var t=arguments[0],r=Number(arguments[1])||0;for(r<0&&(r=Math.max(0,e+r));r<e;++r){var n=this[r];if(t===n||t!==t&&n!==n)return!0}return!1}}),String.prototype.padStart||Object.defineProperty(String.prototype,"padStart",{configurable:!0,writable:!0,value:function(e,r){if(null==this)throw new TypeError("String.prototype.padStart called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(e,10);return i<=a?n:t(i-a,r)+n}}),String.prototype.padEnd||Object.defineProperty(String.prototype,"padEnd",{configurable:!0,writable:!0,value:function(e,r){if(null==this)throw new TypeError("String.prototype.padEnd called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(e,10);return i<=a?n:n+t(i-a,r)}}),String.prototype.trimStart||Object.defineProperty(String.prototype,"trimStart",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimStart called on null or undefined");return e(this,"start")}}),String.prototype.trimLeft||Object.defineProperty(String.prototype,"trimLeft",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimLeft called on null or undefined");return e(this,"start")}}),String.prototype.trimEnd||Object.defineProperty(String.prototype,"trimEnd",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimEnd called on null or undefined");return e(this,"end")}}),String.prototype.trimRight||Object.defineProperty(String.prototype,"trimRight",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimRight called on null or undefined");return e(this,"end")}})}(),function(){function _random(){var e=void 0,t=void 0;switch(arguments.length){case 0:throw new Error("_random called with insufficient parameters");case 1:e=0,t=arguments[0];break;default:e=arguments[0],t=arguments[1]}if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.floor(_nativeMathRandom()*(t-e+1))+e}function _randomIndex(e,t){var r=void 0,n=void 0;switch(t.length){case 1:r=0,n=e-1;break;case 2:r=0,n=Math.trunc(t[1]);break;default:r=Math.trunc(t[1]),n=Math.trunc(t[2])}return Number.isNaN(r)?r=0:!Number.isFinite(r)||r>=e?r=e-1:r<0&&(r=e+r,r<0&&(r=0)),Number.isNaN(n)?n=0:!Number.isFinite(n)||n>=e?n=e-1:n<0&&(n=e+n,n<0&&(n=e-1)),_random(r,n)}function _getCodePointStartAndEnd(e,t){var r=e.charCodeAt(t);if(Number.isNaN(r))return{char:"",start:-1,end:-1};if(r<55296||r>57343)return{char:e.charAt(t),start:t,end:t};if(r>=55296&&r<=56319){var n=t+1;if(n>=e.length)throw new Error("high surrogate without trailing low surrogate");var a=e.charCodeAt(n);if(a<56320||a>57343)throw new Error("high surrogate without trailing low surrogate");return{char:e.charAt(t)+e.charAt(n),start:t,end:n}}if(0===t)throw new Error("low surrogate without leading high surrogate");var i=t-1,o=e.charCodeAt(i);if(o<55296||o>56319)throw new Error("low surrogate without leading high surrogate");return{char:e.charAt(i)+e.charAt(t),start:i,end:t}}var _nativeMathRandom=Math.random;Object.defineProperty(Array,"random",{configurable:!0,writable:!0,value:function(e){if(null==e||"object"!==("undefined"==typeof e?"undefined":_typeof(e))||!Object.prototype.hasOwnProperty.call(e,"length"))throw new TypeError("Array.random array parameter must be an array or array-lke object");var t=e.length>>>0;if(0!==t){var r=0===arguments.length?_random(0,t-1):_randomIndex(t,Array.prototype.slice.call(arguments,1));return e[r]}}}),Object.defineProperty(Array.prototype,"concatUnique",{configurable:!0,writable:!0,value:function e(){if(null==this)throw new TypeError("Array.prototype.concatUnique called on null or undefined");var t=Array.from(this);if(0===arguments.length)return t;var r=Array.prototype.reduce.call(arguments,function(e,t){return e.concat(t)},[]),n=r.length;if(0===n)return t;for(var a=Array.prototype.indexOf,i=Array.prototype.push,o=0;o<n;++o){var e=r[o];a.call(t,e)===-1&&i.call(t,e)}return t}}),Object.defineProperty(Array.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.count called on null or undefined");for(var e=Array.prototype.indexOf,t=arguments[0],r=Number(arguments[1])||0,n=0;(r=e.call(this,t,r))!==-1;)++n,++r;return n}}),Object.defineProperty(Array.prototype,"delete",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.delete called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.indexOf,r=Array.prototype.push,n=Array.prototype.splice,a=Array.prototype.concat.apply([],arguments),i=[],o=0,s=a.length;o<s;++o)for(var u=a[o],l=0;(l=t.call(this,u,l))!==-1;)r.apply(i,n.call(this,l,1));return i}}),Object.defineProperty(Array.prototype,"deleteAt",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.deleteAt called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.splice,r=[].concat(_toConsumableArray(new Set(Array.prototype.concat.apply([],arguments).map(function(t){return t<0?Math.max(0,e+t):t})).values())),n=[].concat(_toConsumableArray(r)).sort(function(e,t){return t-e}),a=[],i=0,o=r.length;i<o;++i)a[i]=this[r[i]];for(var s=0,u=n.length;s<u;++s)t.call(this,n[s],1);return a}}),Object.defineProperty(Array.prototype,"flatten",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.flatten called on null or undefined");return Array.prototype.reduce.call(this,function(e,t){return e.concat(Array.isArray(t)?t.flatten():t)},[])}}),Object.defineProperty(Array.prototype,"includesAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAll called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAll.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(!Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!1;return!0}}),Object.defineProperty(Array.prototype,"includesAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAny called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAny.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!0;return!1}}),Object.defineProperty(Array.prototype,"pluck",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.pluck called on null or undefined");var e=this.length>>>0;if(0!==e){var t=0===arguments.length?_random(0,e-1):_randomIndex(e,[].concat(Array.prototype.slice.call(arguments)));return Array.prototype.splice.call(this,t,1)[0]}}}),Object.defineProperty(Array.prototype,"pluckMany",{configurable:!0,writable:!0,value:function(e){if(null==this)throw new TypeError("Array.prototype.pluckMany called on null or undefined");var t=this.length>>>0;if(0===t)return[];var r=Math.trunc(e);if(!Number.isInteger(r))throw new Error("Array.prototype.pluckMany want parameter must be an integer");if(r<1)return[];r>t&&(r=t);var n=Array.prototype.splice,a=[],i=t-1;do a.push(n.call(this,_random(0,i--),1)[0]);while(a.length<r);return a}}),Object.defineProperty(Array.prototype,"pushUnique",{configurable:!0,writable:!0,value:function e(){if(null==this)throw new TypeError("Array.prototype.pushUnique called on null or undefined");var t=arguments.length;if(0===t)return this.length>>>0;for(var r=Array.prototype.indexOf,n=Array.prototype.push,a=0;a<t;++a){var e=arguments[a];r.call(this,e)===-1&&n.call(this,e)}return this.length>>>0}}),Object.defineProperty(Array.prototype,"random",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.random called on null or undefined");var e=this.length>>>0;if(0!==e){var t=0===arguments.length?_random(0,e-1):_randomIndex(e,[].concat(Array.prototype.slice.call(arguments)));return this[t]}}}),Object.defineProperty(Array.prototype,"randomMany",{configurable:!0,writable:!0,value:function(e){if(null==this)throw new TypeError("Array.prototype.randomMany called on null or undefined");var t=this.length>>>0;if(0===t)return[];var r=Math.trunc(e);if(!Number.isInteger(r))throw new Error("Array.prototype.randomMany want parameter must be an integer");if(r<1)return[];r>t&&(r=t);var n=new Map,a=[],i=t-1;do{var o=void 0;do o=_random(0,i);while(n.has(o));n.set(o,!0),a.push(this[o])}while(a.length<r);return a}}),Object.defineProperty(Array.prototype,"shuffle",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.shuffle called on null or undefined");var e=this.length>>>0;if(0===e)return this;for(var t=e-1;t>0;--t){var r=Math.floor(_nativeMathRandom()*(t+1));if(t!==r){var n=this[t];this[t]=this[r],this[r]=n}}return this}}),Object.defineProperty(Array.prototype,"unshiftUnique",{configurable:!0,writable:!0,value:function e(){if(null==this)throw new TypeError("Array.prototype.unshiftUnique called on null or undefined");var t=arguments.length;if(0===t)return this.length>>>0;for(var r=Array.prototype.indexOf,n=Array.prototype.unshift,a=0;a<t;++a){var e=arguments[a];r.call(this,e)===-1&&n.call(this,e)}return this.length>>>0}}),Object.defineProperty(Function.prototype,"partial",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Function.prototype.partial called on null or undefined");var e=Array.prototype.slice,t=this,r=e.call(arguments,0);return function(){for(var n=[],a=0,i=0;i<r.length;++i)n.push(r[i]===undefined?arguments[a++]:r[i]);return t.apply(this,n.concat(e.call(arguments,a)))}}}),Object.defineProperty(Math,"clamp",{configurable:!0,writable:!0,value:function e(t,r,n){var e=Number(t);return Number.isNaN(e)?NaN:e.clamp(r,n)}}),Object.defineProperty(Math,"easeInOut",{configurable:!0,writable:!0,value:function(e){return 1-(Math.cos(Number(e)*Math.PI)+1)/2}}),Object.defineProperty(Number.prototype,"clamp",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Number.prototype.clamp called on null or undefined");if(2!==arguments.length)throw new Error("Number.prototype.clamp called with an incorrect number of parameters");var e=Number(arguments[0]),t=Number(arguments[1]);if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.min(Math.max(this,e),t)}}),RegExp.escape||!function(){var e=/[\\^$*+?.()|[\]{}]/g,t=new RegExp(e.source);Object.defineProperty(RegExp,"escape",{configurable:!0,writable:!0,value:function(r){var n=String(r);return n&&t.test(n)?n.replace(e,"\\$&"):n}})}(),function(){var e=/{(\d+)(?:,([+-]?\d+))?}/g,t=new RegExp(e.source);Object.defineProperty(String,"format",{configurable:!0,writable:!0,value:function(r){function n(e,t,r){if(!t)return e;var n=Math.abs(t)-e.length;if(n<1)return e;var a=String(r).repeat(n);return t<0?e+a:a+e}if(arguments.length<2)return 0===arguments.length?"":r;var a=2===arguments.length&&Array.isArray(arguments[1])?[].concat(_toConsumableArray(arguments[1])):Array.prototype.slice.call(arguments,1);return 0===a.length?r:t.test(r)?(e.lastIndex=0,r.replace(e,function(e,t,r){var i=a[t];if(null==i)return"";for(;"function"==typeof i;)i=i();switch("undefined"==typeof i?"undefined":_typeof(i)){case"string":break;case"object":i=JSON.stringify(i);break;default:i=String(i)}return n(i,r?Number.parseInt(r,10):0," ")})):r}})}(),Object.defineProperty(String.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.contains called on null or undefined");return String.prototype.indexOf.apply(this,arguments)!==-1}}),Object.defineProperty(String.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.count called on null or undefined");var e=String(arguments[0]||"");if(""===e)return 0;for(var t=String.prototype.indexOf,r=e.length,n=Number(arguments[1])||0,a=0;(n=t.call(this,e,n))!==-1;)++a,n+=r;return a}}),Object.defineProperty(String.prototype,"splice",{configurable:!0,writable:!0,value:function(e,t,r){if(null==this)throw new TypeError("String.prototype.splice called on null or undefined");var n=this.length>>>0;if(0===n)return"";var a=Number(e);Number.isSafeInteger(a)?a<0&&(a+=n,a<0&&(a=0)):a=0,a>n&&(a=n);var i=Number(t);(!Number.isSafeInteger(i)||i<0)&&(i=0);var o=this.slice(0,a);return"undefined"!=typeof r&&(o+=r),a+i<n&&(o+=this.slice(a+i)),o}}),Object.defineProperty(String.prototype,"splitOrEmpty",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.splitOrEmpty called on null or undefined");return""===String(this)?[]:String.prototype.split.apply(this,arguments)}}),Object.defineProperty(String.prototype,"toLocaleUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toLocaleUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return n===-1?"":r.toLocaleUpperCase()+e.slice(n+1)}}),Object.defineProperty(String.prototype,"toUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return n===-1?"":r.toUpperCase()+e.slice(n+1)}}),Object.defineProperty(Date.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:date)",this.toISOString()]}}),Object.defineProperty(Function.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)","("+this.toString()+")"]}}),Object.defineProperty(Map.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:map)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(RegExp.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)",this.toString()]}}),Object.defineProperty(Set.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:set)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(JSON,"reviveWrapper",{configurable:!0,writable:!0,value:function(e,t){if("string"!=typeof e)throw new TypeError("JSON.reviveWrapper code parameter must be a string");return["(revive:eval)",[e,t]]}}),Object.defineProperty(JSON,"_real_parse",{value:JSON.parse}),Object.defineProperty(JSON,"parse",{configurable:!0,writable:!0,value:function value(text,reviver){return JSON._real_parse(text,function(key,val){var value=val;if(Array.isArray(value)&&2===value.length)switch(value[0]){case"(revive:set)":value=new Set(value[1]);break;case"(revive:map)":value=new Map(value[1]);break;case"(revive:date)":value=new Date(value[1]);break;case"(revive:eval)":try{if(Array.isArray(value[1])){var $ReviveData$=value[1][1];value=eval(value[1][0])}else value=eval(value[1])}catch(e){}}else if("string"==typeof value&&"@@revive@@"===value.slice(0,10))try{value=eval(value.slice(10))}catch(e){}if("function"==typeof reviver)try{value=reviver(key,value)}catch(e){}return value})}}),Object.defineProperty(Array.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.contains called on null or undefined");return Array.prototype.includes.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAll called on null or undefined");return Array.prototype.includesAll.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAny called on null or undefined");return Array.prototype.includesAny.apply(this,arguments)}}),Object.defineProperty(String.prototype,"readBracketedList",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.readBracketedList called on null or undefined");for(var e=new RegExp("(?:\\[\\[((?:\\s|\\S)*?)\\]\\])|([^\"'\\s]\\S*)","gm"),t=[],r=void 0;null!==(r=e.exec(this));)r[1]?t.push(r[1]):r[2]&&t.push(r[2]);return t}})}();var Browser=function(){var e=navigator.userAgent.toLowerCase(),t=e.includes("windows phone"),r=Object.freeze({Android:!t&&e.includes("android"),BlackBerry:/blackberry|bb10/.test(e),iOS:!t&&/ip(?:hone|ad|od)/.test(e),Windows:t||e.includes("iemobile"),any:function(){return r.Android||r.BlackBerry||r.iOS||r.Windows}}),n=!r.Windows&&!/khtml|trident|edge/.test(e)&&e.includes("gecko"),a=!e.includes("opera")&&/msie|trident/.test(e),i=a?function(){var t=/(?:msie\s+|rv:)(\d+\.\d)/.exec(e);return t?Number(t[1]):0}():null,o=e.includes("opera")||e.includes(" opr/"),s=o?function(){var t=new RegExp((/khtml|chrome/.test(e)?"opr":"version")+"\\/(\\d+\\.\\d+)"),r=t.exec(e);return r?Number(r[1]):0}():null;return Object.freeze({userAgent:e,isMobile:r,isGecko:n,isIE:a,ieVersion:i,isOpera:o,operaVersion:s})}(),Has=function(){var e=function(){try{return"function"==typeof document.createElement("audio").canPlayType}catch(e){}return!1}(),t=function(){try{return"Blob"in window&&"File"in window&&"FileList"in window&&"FileReader"in window&&!Browser.isMobile.any()&&(!Browser.isOpera||Browser.operaVersion>=15)}catch(e){}return!1}(),r=function(){try{return"geolocation"in navigator&&"function"==typeof navigator.geolocation.getCurrentPosition&&"function"==typeof navigator.geolocation.watchPosition}catch(e){}return!1}(),n=function(){try{return"MutationObserver"in window&&"function"==typeof window.MutationObserver}catch(e){}return!1}(),a=function(){try{return"performance"in window&&"function"==typeof window.performance.now}catch(e){}return!1}();return Object.freeze({audio:e,fileAPI:t,geolocation:r,mutationObserver:n,performance:a})}(),_ref3=function(){function e(t){if("object"!==("undefined"==typeof t?"undefined":_typeof(t))||null==t)return t;if("function"==typeof t.clone)return t.clone(!0);if(t.nodeType&&"function"==typeof t.cloneNode)return t.cloneNode(!0);var r=void 0;return Array.isArray(t)?r=[]:t instanceof Date?r=new Date(t.getTime()):t instanceof Map?(r=new Map,t.forEach(function(t,n){r.set(n,e(t))})):t instanceof RegExp?r=new RegExp(t):t instanceof Set?(r=new Set,t.forEach(function(t){r.add(e(t))})):r=Object.create(Object.getPrototypeOf(t)),Object.keys(t).forEach(function(n){return r[n]=e(t[n])}),r}function t(e){for(var t=document.createDocumentFragment(),r=document.createElement("p"),n=void 0;null!==(n=e.firstChild);){if(n.nodeType===Node.ELEMENT_NODE){var a=n.nodeName.toUpperCase();switch(a){case"BR":if(null!==n.nextSibling&&n.nextSibling.nodeType===Node.ELEMENT_NODE&&"BR"===n.nextSibling.nodeName.toUpperCase()){e.removeChild(n.nextSibling),e.removeChild(n),t.appendChild(r),r=document.createElement("p");continue}if(!r.hasChildNodes()){e.removeChild(n);continue}break;case"ADDRESS":case"ARTICLE":case"ASIDE":case"BLOCKQUOTE":case"CENTER":case"DIV":case"DL":case"FIGURE":case"FOOTER":case"FORM":case"H1":case"H2":case"H3":case"H4":case"H5":case"H6":case"HEADER":case"HR":case"MAIN":case"NAV":case"OL":case"P":case"PRE":case"SECTION":case"TABLE":case"UL":r.hasChildNodes()&&(t.appendChild(r),r=document.createElement("p")),t.appendChild(n);continue}}r.appendChild(n)}r.hasChildNodes()&&t.appendChild(r),e.appendChild(t)}function r(){try{return document.activeElement||null}catch(e){return null}}function n(e,t,r){var n="object"===("undefined"==typeof e?"undefined":_typeof(e))?e:document.getElementById(e);if(null==n)return null;var a=Array.isArray(t)?t:[t];jQuery(n).empty();for(var i=0,o=a.length;i<o;++i)if(Story.has(a[i]))return new Wikifier(n,Story.get(a[i]).processText().trim()),n;if(null!=r){var s=String(r).trim();""!==s&&new Wikifier(n,s)}return n}function a(e,t,r){return jQuery(document.createElement("span")).addClass("error").attr("title",r).text(L10n.get("errorTitle")+": "+(t||"unknown error")).appendTo(e),!1}function i(e,t){var r=i;switch("undefined"==typeof e?"undefined":_typeof(e)){case"number":if(Number.isNaN(e))return t;break;case"object":if(null===e)return t;if(Array.isArray(e))return e.map(function(e){return r(e,t)}).join(", ");if(e instanceof Set)return[].concat(_toConsumableArray(e)).map(function(e){return r(e,t)}).join(", ");if(e instanceof Map){var n=[].concat(_toConsumableArray(e)).map(function(e){return r(e[0],t)+" ⇒ "+r(e[1],t)}).join("; ");return"( "+n+" )"}return e instanceof Date?e.toLocaleString():"function"==typeof e.toString?e.toString():Object.prototype.toString.call(e);case"function":case"undefined":return t}return String(e)}return Object.freeze(Object.defineProperties({},{clone:{value:e},convertBreaks:{value:t},safeActiveElement:{value:r},setPageElement:{value:n},throwError:{value:a},toStringOrDefault:{value:i}}))}(),clone=_ref3.clone,convertBreaks=_ref3.convertBreaks,safeActiveElement=_ref3.safeActiveElement,setPageElement=_ref3.setPageElement,throwError=_ref3.throwError,toStringOrDefault=_ref3.toStringOrDefault;!function(){function e(e){13!==e.which&&32!==e.which||(e.preventDefault(),jQuery(safeActiveElement()||this).trigger("click"))}function t(e){return function(){var t=jQuery(this);t.is("[aria-pressed]")&&t.attr("aria-pressed","true"===t.attr("aria-pressed")?"false":"true"),e.apply(this,arguments)}}function r(e){return t(function(){jQuery(this).off(".aria-clickable").removeAttr("tabindex aria-controls aria-pressed").not("a,button").removeAttr("role").end().filter("button").prop("disabled",!0),e.apply(this,arguments)})}jQuery.fn.extend({ariaClick:function(n,a){if(0===this.length||0===arguments.length)return this;var i=n,o=a;return null==o&&(o=i,i=undefined),i=jQuery.extend({namespace:undefined,one:!1,selector:undefined,data:undefined,controls:undefined,pressed:undefined,label:undefined},i),"string"!=typeof i.namespace?i.namespace="":"."!==i.namespace[0]&&(i.namespace="."+i.namespace),"boolean"==typeof i.pressed&&(i.pressed=i.pressed?"true":"false"),this.filter("button").prop("type","button"),this.not("a,button").attr("role","button"),this.attr("tabindex",0),null!=i.controls&&this.attr("aria-controls",i.controls),null!=i.pressed&&this.attr("aria-pressed",i.pressed),null!=i.label&&this.attr({"aria-label":i.label,title:i.label}),this.not("button").on("keypress.aria-clickable"+i.namespace,i.selector,e),this.on("click.aria-clickable"+i.namespace,i.selector,i.data,i.one?r(o):t(o)),this}})}(),function(){jQuery.extend({wikiWithOptions:function(e){for(var t=arguments.length,r=Array(t>1?t-1:0),n=1;n<t;n++)r[n-1]=arguments[n];if(0!==r.length){var a=document.createDocumentFragment();r.forEach(function(t){return new Wikifier(a,t,e)});var i=[].concat(_toConsumableArray(a.querySelectorAll(".error"))).map(function(e){return e.textContent.replace(/^(?:(?:Uncaught\s+)?Error:\s+)+/,"")});if(i.length>0)throw new Error(i.join("; "))}},wiki:function(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];this.wikiWithOptions.apply(this,[undefined].concat(t))}}),jQuery.fn.extend({wikiWithOptions:function(e){for(var t=arguments.length,r=Array(t>1?t-1:0),n=1;n<t;n++)r[n-1]=arguments[n];if(0===this.length||0===r.length)return this;var a=document.createDocumentFragment();return r.forEach(function(t){return new Wikifier(a,t,e)}),this.append(a),this},wiki:function(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];return this.wikiWithOptions.apply(this,[undefined].concat(t))}})}();var Util=function(){function e(e){return Object.freeze(Object.assign(Object.create(null),e))}function t(e){return Object.prototype.toString.call(e).slice(8,-1)}function r(e){var t=void 0;switch("undefined"==typeof e?"undefined":_typeof(e)){case"number":t=e;break;case"string":t=Number(e);break;default:return!1}return!Number.isNaN(t)&&Number.isFinite(t)}function n(e){return"boolean"==typeof e||"string"==typeof e&&("true"===e||"false"===e)}function a(e){return String(e).trim().replace(/[^\w\s\u2013\u2014-]+/g,"").replace(/[_\s\u2013\u2014-]+/g,"-").toLocaleLowerCase()}function i(e){if(null==e)return"";var t=String(e);return t&&h.test(t)?t.replace(p,function(e){return g[e]}):t}function o(e){if(null==e)return"";var t=String(e);return t&&y.test(t)?t.replace(m,function(e){return v[e.toLowerCase()]}):t}function s(e,t){var r=String(e),n=Math.trunc(t),a=r.charCodeAt(n);if(Number.isNaN(a))return{char:"",start:-1,end:-1};var i={char:r.charAt(n),start:n,end:n};if(a<55296||a>57343)return i;if(a>=55296&&a<=56319){var o=n+1;if(o>=r.length)return i;var s=r.charCodeAt(o);return s<56320||s>57343?i:(i.char=i.char+r.charAt(o),i.end=o,i)}if(0===n)return i;var u=n-1,l=r.charCodeAt(u);return l<55296||l>56319?i:(i.char=r.charAt(u)+i.char,i.start=u,i)}function u(){return(Has.performance?performance:Date).now()}function l(e){var t=/^([+-]?(?:\d*\.)?\d+)([Mm]?[Ss])$/,r=t.exec(String(e));if(null===r)throw new SyntaxError('invalid time value syntax: "'+e+'"');var n=Number(r[1]);if(/^[Ss]$/.test(r[2])&&(n*=1e3),Number.isNaN(n)||!Number.isFinite(n))throw new RangeError('invalid time value: "'+e+'"');return n}function c(e){if("number"!=typeof e||Number.isNaN(e)||!Number.isFinite(e)){var t=void 0;switch("undefined"==typeof e?"undefined":_typeof(e)){case"string":t='"'+e+'"';break;case"number":t=String(e);break;default:t=Object.prototype.toString.call(e)}throw new Error("invalid milliseconds: "+t)}return e+"ms"}function d(e){if(!e.includes("-"))switch(e){case"bgcolor":return"backgroundColor";case"float":return"cssFloat";default:return e}var t="-ms-"===e.slice(0,4)?e.slice(1):e;return t.split("-").map(function(e,t){return 0===t?e:e.toUpperFirst()}).join("")}function f(e){var t=document.createElement("a"),r=Object.create(null);t.href=e,t.search&&t.search.replace(/^\?/,"").splitOrEmpty(/(?:&(?:amp;)?|;)/).forEach(function(e){var t=e.split("="),n=_slicedToArray(t,2),a=n[0],i=n[1];r[a]=i});var n=t.host&&"/"!==t.pathname[0]?"/"+t.pathname:t.pathname;return{href:t.href,protocol:t.protocol,host:t.host,hostname:t.hostname,port:t.port,path:""+n+t.search,pathname:n,query:t.search,search:t.search,queries:r,searches:r,hash:t.hash}}var p=/[&<>"'`]/g,h=new RegExp(p.source),g=Object.freeze({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;","`":"&#96;"}),m=/&(?:amp|#38|#x26|lt|#60|#x3c|gt|#62|#x3e|quot|#34|#x22|apos|#39|#x27|#96|#x60);/gi,y=new RegExp(m.source,"i"),v=Object.freeze({"&amp;":"&","&#38;":"&","&#x26;":"&","&lt;":"<","&#60;":"<","&#x3c;":"<","&gt;":">","&#62;":">","&#x3e;":">","&quot;":'"',"&#34;":'"',"&#x22;":'"',"&apos;":"'","&#39;":"'","&#x27;":"'","&#96;":"`","&#x60;":"`"});return Object.freeze(Object.defineProperties({},{toEnum:{value:e},toStringTag:{value:t},isNumeric:{value:r},isBoolean:{value:n},slugify:{value:a},escape:{value:i},unescape:{value:o},charAndPosAt:{value:s},fromCssTime:{value:l},toCssTime:{value:c},fromCssProperty:{value:d},parseUrl:{value:f},now:{value:u},random:{value:Math.random},entityEncode:{value:i},entityDecode:{value:o},evalExpression:{value:function(){return Scripting.evalJavaScript.apply(Scripting,arguments)}},evalStatements:{value:function(){return Scripting.evalJavaScript.apply(Scripting,arguments)}}}))}(),SimpleAudio=function(){function e(){return g}function t(e){g=!!e,l("mute",g)}function r(){return p}function n(e){p=Math.clamp(e,.2,5),l("rate",p)}function a(){return h}function i(e){h=Math.clamp(e,0,1),l("volume",h)}function o(){l("stop")}function s(e,t){if("function"!=typeof t)throw new Error("callback parameter must be a function");f.set(e,t)}function u(e){f.delete(e)}function l(e,t){f.forEach(function(r){return r(e,t)})}function c(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];return new(Function.prototype.bind.apply(m,[null].concat(t)))}function d(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];return new(Function.prototype.bind.apply(y,[null].concat(t)))}var f=new Map,p=1,h=1,g=!1,m=function(){function e(t){if(_classCallCheck(this,e),Array.isArray(t))this._create(t);else{if(!(t instanceof e))throw new Error("sources parameter must be an array of either URLs or source objects");this._copy(t)}}return _createClass(e,[{key:"_create",value:function(t){if(!Array.isArray(t)||0===t.length)throw new Error("sources parameter must be an array of either URLs or source objects");var r=/^data:\s*audio\/([^;,]+)\s*[;,]/i,n=/\.([^.\/\\]+)$/,a=e.getType,i=[],o=document.createElement("audio");if(t.forEach(function(e){var t=null;switch("undefined"==typeof e?"undefined":_typeof(e)){case"string":var s=void 0;if("data:"===e.slice(0,5)){if(s=r.exec(e),null===s)throw new Error("source data URI missing media type")}else if(s=n.exec(Util.parseUrl(e).pathname),null===s)throw new Error("source URL missing file extension");var u=a(s[1]);null!==u&&(t={src:e,type:u});break;case"object":if(null===e)throw new Error("source object cannot be null");if(!e.hasOwnProperty("src"))throw new Error('source object missing required "src" property');
