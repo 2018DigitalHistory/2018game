@@ -120,6 +120,16 @@ a {
 	color: #FFC15E;
 	}
 
+.footnote {
+ opacity: .2; 
+ color: black;
+}
+
+.footnote:hover {
+  color: red;
+  opacity: 1;
+  transition: 2s all ease;
+}
 
 
 
@@ -151,13 +161,13 @@ But first, you must understand your origins, a taste of what is to come.
 &lt;&lt;set $guild to 5&gt;&gt;
 &lt;&lt;set $family to 5&gt;&gt;
 &lt;/div&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Guild Good" tags="" position="2407,977" size="100,100">&lt;&lt;if $religion &gt;5&gt;&gt; [[Religion Good]] 
-&lt;&lt;elseif $religion&lt;=5&gt;&gt; [[Religion Bad]] 
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Guild Good" tags="" position="2407,977" size="100,100">&lt;&lt;if $religion &gt;5&gt;&gt; [[Religion-&gt;Religion Good]] 
+&lt;&lt;elseif $religion&lt;=5&gt;&gt; [[Religion-&gt;Religion Bad]] 
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="The Choice" tags="" position="847,395" size="100,100">&quot;Well at least you are not completely useless! You know your chores, get to them!&quot;
 
 [[&quot;Yes, Master Organ&quot;]] or [[&quot;Damn you to Hell!&quot;]]
 
-*The game will provide you with a number of choices. Your path will be determined depending upon how you choose.</tw-passagedata><tw-passagedata pid="4" name="The Reputation System" tags="" position="840,831" size="100,100">Well done! You have completed the tutorial. The last option was to give you a taste of what will ultimately determine your fate. You may have noticed the panel of different terms at the bottom. Those are your Pillars. Most choices in the game will raise or lower those Pillars, and you must be aware that choices have consequences on the end of your game.
+*The game will provide you with a number of choices. Your path will be determined depending upon how you choose.</tw-passagedata><tw-passagedata pid="4" name="The Reputation System" tags="" position="825,825" size="100,100">Well done! You have completed the tutorial. The last option was to give you a taste of what will ultimately determine your fate. You may have noticed the panel of different terms at the bottom. Those are your Pillars. Most choices in the game will raise or lower those Pillars, and you must be aware that choices have consequences on the end of your game.
 
 For example, your choice raised your Religion Pillar by 1. Do not feel pressured to make choices based solely on the Pillars, but if one were to fall to 0, your journey will end immediately. 
 
@@ -167,8 +177,12 @@ Good luck, Hugh Bradley, and may your journey yield great results.
 
 &lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $religion +=1&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="A Merciless City" tags="" position="834,984" size="100,100">
-A Merciless City
+&lt;&lt;/nobr&gt;&gt;
+
+1 &lt;span class=&quot;footnote&quot;&gt; Barbara Hannawalt,&lt;i&gt;Growing Up in Medieval London&lt;/i&gt;(New York: Oxford University Press, 1993), 129-153&lt;/span&gt;
+
+</tw-passagedata><tw-passagedata pid="5" name="A Merciless City" tags="" position="825,975" size="100,100">
+&lt;&lt;b&gt;&gt;A Merciless City&lt;&lt;/b&gt;&gt;
 
 London. In the Year of Our Lord 1390.
 
@@ -220,8 +234,8 @@ You feel a twinge of guilt. You have silk, but it has been reserved by Lady Stra
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Family Good" tags="" position="2241,987" size="100,100">If Fam Var. &gt;5
 
 
-&lt;&lt;if $guild &gt;5&gt;&gt; [[Guild Good]] 
-&lt;&lt;elseif $guild&lt;=5&gt;&gt; [[Guild Bad]] 
+&lt;&lt;if $guild &gt;5&gt;&gt; [[Guild-&gt;Guild Good]] 
+&lt;&lt;elseif $guild&lt;=5&gt;&gt; [[Guild-&gt;Guild Bad]] 
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="Civic Bad" tags="" position="2750,1134" size="100,100">&lt;&lt;if $royalty &gt;5&gt;&gt; [[Royalty Good]] 
 &lt;&lt;elseif $royalty&lt;=5&gt;&gt; [[Royalty Bad]] 
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Guild Bad" tags="" position="2417,1114" size="100,100">&lt;&lt;if $religion &gt;5&gt;&gt; [[Religion Good]] 
@@ -232,10 +246,10 @@ QUOTE
 
 &lt;&lt;if $guild &gt;5&gt;&gt; [[Guild Good]] 
 &lt;&lt;elseif $guild&lt;=5&gt;&gt; [[Guild Bad]] 
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Royalty Good" tags="" position="2939,1133" size="100,100">[[Bibliography WORK]] </tw-passagedata><tw-passagedata pid="17" name="Royalty Bad" tags="" position="2927,997" size="100,100">[[Bibliography WORK]] </tw-passagedata><tw-passagedata pid="18" name="Civic Good" tags="" position="2746,989" size="100,100">&lt;&lt;if $royalty &gt;5&gt;&gt; [[Royalty Good]] 
-&lt;&lt;elseif $royalty&lt;=5&gt;&gt; [[Royalty Bad]] 
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Religion Good" tags="" position="2583,976" size="100,100">&lt;&lt;if $civic &gt;5&gt;&gt; [[Civic Good]] 
-&lt;&lt;elseif $civic&lt;=5&gt;&gt; [[Civic Bad]] 
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Royalty Good" tags="" position="2939,1133" size="100,100">[[Bibliography WORK]] </tw-passagedata><tw-passagedata pid="17" name="Royalty Bad" tags="" position="2927,997" size="100,100">[[Bibliography WORK]] </tw-passagedata><tw-passagedata pid="18" name="Civic Good" tags="" position="2746,989" size="100,100">&lt;&lt;if $royalty &gt;5&gt;&gt; [[Royalty-&gt;Royalty Good]] 
+&lt;&lt;elseif $royalty&lt;=5&gt;&gt; [[Royalty-&gt;Royalty Bad]] 
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Religion Good" tags="" position="2583,976" size="100,100">&lt;&lt;if $civic &gt;5&gt;&gt; [[Civic-&gt;Civic Good]] 
+&lt;&lt;elseif $civic&lt;=5&gt;&gt; [[Civic-&gt;Civic Bad]] 
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="The Ending" tags="" position="2100,1039" size="100,100">Congratulations! You have survived a truly tumultuous time in the city of London, and that is no small feat in of itself! Through royal upheaval, plague, religious pressure, and guild reputation, you should now have a basic taste of the London experience, and living in it during the 14th century.
 
 The story of London, and much of history, is the formation of personal relationships and how they crafetd a larger society. Battles and kings are only a mere fraction of the human experience, and being a merchant and mayor in London is a small example of the vast majority. 
@@ -244,8 +258,8 @@ You will soon learn of your fate in each of the Pillars. Even if the game yielde
 
 You may continue on here to learn about each of your pillars.
 
-&lt;&lt;if $family&gt;5&gt;&gt; [[Family Good]] 
-&lt;&lt;elseif $family&lt;5&gt;&gt; [[Family Bad]] 
+&lt;&lt;if $family&gt;5&gt;&gt; [[Family-&gt;Family Good]] 
+&lt;&lt;elseif $family&lt;5&gt;&gt; [[Family-&gt;Family Bad]] 
 &lt;&lt;/if&gt;&gt;
 
 </tw-passagedata><tw-passagedata pid="21" name="Bibliography WORK" tags="" position="3143,1075" size="100,100">Check out these sources for in-depth information on many of the themes and details found in the game:
@@ -378,9 +392,9 @@ Lady Strange pierces you with a steely gaze, and you attempt to hold your will a
 &lt;&lt;set $civic -=1&gt;&gt;
 &lt;&lt;set $guild -=1&gt;&gt;
 &lt;&lt;set $religion +=2&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="To the grocer" tags="" position="717,1851" size="100,100">The grocer, Pierre Beauchamp, is a strange man. As a foreign-born man, he had very little support from the community and was rejected for years from the Grocers Guild, an organization almost as powerful as your own. 
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="To the grocer" tags="" position="725,1850" size="100,100">The grocer, Pierre Beauchamp, is a strange man. As a foreign-born man, he had very little support from the community and was rejected for years from the Grocers Guild, an organization almost as powerful as your own. 
 
-&quot;Bonjour, mon ami. Perhaps you wish to buy from me? Father Burke mentioned you may want [[a supply of fresh venison]], from the King&#39;s stock, so best not to tell the authorities.&quot;
+&quot;&lt;i&gt;Bonjour, mon ami.&lt;/i&gt; Perhaps you wish to buy from me? Father Burke mentioned you may want [[a supply of fresh venison]], from the King&#39;s stock, so best not to tell the authorities.&quot;
 
 You are confused, wondering why a priest and a foreigner are conspiring to give you illegal game, and you hesitate to take it.
 
@@ -436,7 +450,7 @@ Or [[Reject him]]
 &lt;&lt;set $religion -=1&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="&quot;Unhand me you ruffian!&quot;" tags="" position="535,2007" size="100,100">You desperately struggle, but the man, without a word, slides the knife across your throat. You die, mere feet away from the altar cloth of St. Vedast.
 
-[[Return to life -&gt;a supply of fresh venison]]</tw-passagedata><tw-passagedata pid="37" name="Offer whatever you have" tags="" position="739,2144" size="100,100">&quot;I have groceries, uhh venison, from the King&#39;s stock!&quot;
+[[Return to life -&gt;a supply of fresh venison]]</tw-passagedata><tw-passagedata pid="37" name="Offer whatever you have" tags="" position="750,2125" size="100,100">&quot;I have groceries, uhh venison, from the King&#39;s stock!&quot;
 
 You fear the man be an authority of the king, a sheriff or customs agent, but the knife disappears and a well-built man enters your vision. He is clearly royal, of noble blood, but he seems to have been running for a few days.
 
@@ -465,11 +479,11 @@ The Earl sniffs indignantly, and you wonder if [[getting rid of him first]] is t
 &lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $guild +=1&gt;&gt;
 &lt;&lt;set $civic -=2&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="Reject him" tags="" position="1037,2258" size="100,100">You shake your head no and he savagely twists your arm until you are once again trapped with a knife in your back.
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="Reject him" tags="" position="1025,2250" size="100,100">You shake your head no and he savagely twists your arm until you are once again trapped with a knife in your back.
 
 &quot;If you will not help me willingly you can be my hostage.&quot; With that, de Mawbry shoves you into the street.
 
-The walk from St. Vedast to the Thames River is short, merely thrity minutes through the narrow London streets. You can see the gulls over the houses and shops circling the body of water. 
+The walk from St. Vedast to the Thames River is short, merely thirty minutes through the narrow London streets. You can see the gulls over the houses and shops circling the body of water. 
 
 As you stand there, Simon, your former ward and now apprentice, approaches with a look of grave concern. 
 
@@ -602,7 +616,7 @@ Finally, one of the guards come over and tap the Earl&#39;s shoulder. No amount 
 Just as the docks appear, you see the sheriff, flanked by a troop of roayl guards, walking down the street. They spot you, and at first ignore the shuffling man beside you. But as you get closer to intersecting with them, more and more of the guards glance over with suspicion. You start to drift slighlty to the side, pretending to not be associated with the man at next to you.
 
 Fortunately, your reputation as an established member of civil society gives the guards pause, as if nervous to even disturb your casual stroll towards the river by questioning a random urchin. The guards walk on, and you get the Earl of Nottingham to the docks. You see Father Burke with a transport barge, ready to take the Earl to the king and away from the city&#39;s ambitious agents. You can now help your wife, who continues to be ill. [[Proceed to the apothecary]] 
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="Allow him to approach her" tags="" position="810,2870" size="100,100">&lt;&lt;if $royalty &gt;5&gt;&gt; The Lady Strange sees you approaching, and instantly recognizes her husband. She heads for the same side street you wanted to take, and you realize she is leading you away from a massive troop of royal soldiers led by the sheriff. They head for St. Vedast, no doubt to finally imprison the man at your shoulder. Lady Strange gets you to the docks without a word, and seeing Father Burke standing next to a transport barge, she then glides away, a final saving act for her husband. With the Earl of Nottingham away, you can now turn your attention to retrieving medicine from the apothecary. [[Proceed to the apothecary]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="Allow him to approach her" tags="" position="809,2870" size="100,100">&lt;&lt;if $royalty &gt;5&gt;&gt; The Lady Strange sees you approaching, and instantly recognizes her husband. She heads for the same side street you wanted to take, and you realize she is leading you away from a massive troop of royal soldiers led by the sheriff. They head for St. Vedast, no doubt to finally imprison the man at your shoulder. Lady Strange gets you to the docks without a word, and seeing Father Burke standing next to a transport barge, she then glides away, a final saving act for her husband. With the Earl of Nottingham away, you can now turn your attention to retrieving medicine from the apothecary. [[Proceed to the apothecary]]
 &lt;&lt;nobr&gt;&gt;
 &lt;&lt;set $religion +=2&gt;&gt;
 &lt;&lt;set $royalty +=2&gt;&gt;
