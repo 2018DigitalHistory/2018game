@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Complete example</title>
+	<title>Farming Simulator</title>
 	<style>
 		/**
  * CSS Reset from http://meyerweb.com/eric/tools/css/reset/ 
@@ -612,7 +612,9 @@ p + p {
 </head>
 <body>
 	<div id="root"></div>
-	<tw-storydata name="Complete example" startnode="1" creator="Twine" creator-version="2.2.1" ifid="654A88EA-9C60-4E5F-9090-CC011265C10E" zoom="1" format="Adventures" format-version="1.0.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+	<tw-storydata name="Farming Simulator" startnode="1" creator="Twine" creator-version="2.2.1" ifid="654A88EA-9C60-4E5F-9090-CC011265C10E" zoom="1" format="Adventures" format-version="1.1.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+
+
 
 
 
@@ -637,174 +639,540 @@ window.config = {
             "tag": "bread",
             "name": "Bread",
             "x": 9, "y": 18
+        },
+        {
+            "tag": "ring",
+            "name": "Ring",
+            "x": 0, "y": 68
+        },
+			  {
+            "tag": "book",
+            "name": "Book",
+            "x": 2, "y": 61
+        },
+			  {
+            "tag": "sword",
+            "name": "Sword",
+            "x": 12, "y": 107
+        },
+				{
+            "tag": "coins",
+            "name": "Coins",
+            "x": 2, "y": 32
+        },
+				{
+            "tag": "key",
+            "name": "Key",
+            "x": 2, "y": 33
+        },
+				{
+            "tag": "churchkey",
+            "name": "Priest's Key",
+            "x": 5, "y": 31
+        },
+				{
+            "tag": "luckystone",
+            "name": "Lucky Stone",
+            "x": 5, "y": 28
         }
     ]
 };
 
 
 
-</script><tw-passagedata pid="1" name="Choose your name" tags="" position="400,200" size="100,100">&lt;%
+
+
+
+</script><tw-passagedata pid="1" name="Choose your name" tags="" position="412,200" size="100,100">&lt;%
 // Hide the character panel (on the left)
 // It will be brought back in the following passage
 story.config.displayCharacterPanel = false;
 %&gt;
 
+&lt;p&gt;&lt;center&gt;
+Please enter the name of your character&lt;/center&gt;&lt;/p&gt;
 
-Please enter the name of your character
-
-&lt;p&gt;&lt;input onchange=&quot;character.name = this.value&quot;&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;center&gt;
+&lt;input onchange=&quot;character.name = this.value&quot;&gt;
+&lt;/center&gt;&lt;/p&gt;
 [[Confirm|Second]]</tw-passagedata><tw-passagedata pid="2" name="Second" tags="" position="547,200" size="100,100">&lt;%
 story.config.displayCharacterPanel = true;
 %&gt;
 
 Welcome &lt;%= character.name %&gt;!
 
-Let&#39;s discover a bit more about you. When you were young, you were...
+You are the child of a lord, born with a silver spoon in your mouth. Your life has been significantly easier than someone of lower status. You are 16 years old.
 
-[[An orphan, adopted by your peasant uncle |Orphan]]
-
-[[The son of a lord, born with a silver spoon in its mouth|Noble]]</tw-passagedata><tw-passagedata pid="3" name="Orphan" tags="" position="701,50" size="100,100">You&#39;re just an orphan.
-
-[[Continue|Intermediate]]</tw-passagedata><tw-passagedata pid="4" name="Noble" tags="" position="698,201" size="100,100">&lt;%
+[[The child of a lord, born with a silver spoon in its mouth|Noble]]</tw-passagedata><tw-passagedata pid="3" name="Noble" tags="" position="698,201" size="100,100">&lt;%
 character.addGold(100);
 %&gt;
 
-You live on a large estate in Middlesex. Your Father, Richard, is a successful lord and wants to teach you how to manage a manor. You are hesitant because you would rather be a clergy member, but the gold he gave you persuaded you otherwise.
+You live on a large estate in Middlesex. Your Father, Richard, is a successful lord and wants to teach you how to manage a manor. You are hesitant because you would rather be a clergy member, but the gold he gave you persuaded you otherwise. You forgo any other apprentices and instead join the family business
 
-[[Continue|Manor_1]]</tw-passagedata><tw-passagedata pid="5" name="Soldier" tags="" position="164,281" size="100,100">&lt;% character.inventory.addItem(&quot;bread&quot;); %&gt;
+[[Continue|Manor_1]]</tw-passagedata><tw-passagedata pid="4" name="Manor_1" tags="" position="827,202" size="100,100">&lt;p&gt;Your Father, Richard, walks you around his estate with pride; acquiring such a large amount of land was not easy.&lt;/p&gt;
 
-You&#39;re a soldier.
+Richard says 
+&lt;p&gt;&lt;center&gt;
+&quot;&lt;%= character.name %&gt;, all of this will someday be yours. Tomorrow I want you to go to the market in London and buy a silver ring. Come find me when you get back.&quot;
+&lt;/center&gt;&lt;/p&gt;
 
-Since your father trained you when you were a child, you carry a sword with you at all times.
 
-</tw-passagedata><tw-passagedata pid="6" name="Intermediate" tags="" position="826,52" size="100,100">You arrive at the main gate of the city. Two guards of the city refuses to let you enter. You...
 
-&lt;%
-// This condition will check wether the player
-// has a sword in its inventory. If yes,
-// it will display an additional choice.
-if (character.inventory.hasItem(&quot;sword&quot;)) {
-%&gt;
+&lt;p&gt;You wonder how you will be able to manage such a complex system.&lt;/p&gt;
 
-[[[Sword] Attack the guards|Attack]]
+[[Continue to London|test_1]]</tw-passagedata><tw-passagedata pid="5" name="test_1" tags="" position="945,333" size="100,100">London is a bustling city where the action never stops.  &lt;%= character.name %&gt; has been to London many times and is quite familiar with the ins and outs. 
 
+&lt;%= character.name %&gt; heads to the market and finds a man selling jewelry. The merchant, after looking at your nice clothes, tells you that a silver ring is 15d.
+
+&lt;P ALIGN=RIGHT&gt;&lt;a href=&quot;http://medieval.ucdavis.edu/120D/Money.html&quot;&gt;3&lt;/a&gt;&lt;/p&gt;
+
+
+[[Okay!|Buy the ring]]
+[[15d!? No thanks!|Another Merchant]]
+
+&lt;% if (character.health &gt; 17) { %&gt;
+[[Go to Southwark|Southwark]]
 &lt;% } %&gt;
-
-&lt;%
-// This condition will check if the player
-// has at least 50 coins in its inventory.
-if (character.gold &gt;= 50) {
+</tw-passagedata><tw-passagedata pid="6" name="Buy the ring" tags="" position="944,458" size="100,100">&lt;%
+character.removeGold(15); // Remove the gold
+character.inventory.addItem(&quot;ring&quot;); // Give a spade to the player
 %&gt;
-
-[[[50 gold] Bribe the guards|Bribe]]
-
-&lt;% } %&gt;
-
-[[Turn back, you didn&#39;t even want to go in anyway|Exit]]</tw-passagedata><tw-passagedata pid="7" name="Attack" tags="button-red" position="963,49" size="100,100">You slew the guards pretty easily. You proceed into the city.
-
-As you walk into the city, you feel like you are watched...
-
-[[Continue|End]]</tw-passagedata><tw-passagedata pid="8" name="Bribe" tags="button-green" position="1114,162" size="100,100">&lt;%
-// We remove the gold
-character.removeGold(50);
-%&gt;
-
-You give the gold to the guard and proceed into the city.
-
-You can&#39;t help but feel like you&#39;re watched...
-
-[[Continue|End]]
-
-</tw-passagedata><tw-passagedata pid="9" name="Exit" tags="" position="1122,53" size="100,100">You turn back.
-
-You have a bad feeling, as if something terrible was about to happen.
-
-[[Continue|End]]</tw-passagedata><tw-passagedata pid="10" name="End" tags="" position="1297,116" size="100,100">&lt;%
-// We make sure we kill the player
-character.damage(character.health);
-%&gt;
-
-You feel a small pinch on you&#39;re neck. You realize it was a poisoned dart.</tw-passagedata><tw-passagedata pid="11" name="Death" tags="theme-red" position="398,77" size="100,100">&lt;%
-// This passage will be displayed whenever the health
-// of the player reaches zero. To tell the game to
-// show this passage, we specify the name of it (&quot;Death&quot;)
-// in the setting 
-%&gt;
-
-You have died.</tw-passagedata><tw-passagedata pid="12" name="Manor_1" tags="" position="827,202" size="100,100">Your Father, Richard, walks you around his estate with pride; acquiring such a large amount of land was not easy.
-
-Richard says “&lt;%= character.name %&gt;, all of this will someday be yours. Tomorrow I want you to go to the market in London and buy a spade. Come find me when you get back.”
-
-You wonder how you will be able to manage such a complex system.
-
-[[Continue to London|test_1]]</tw-passagedata><tw-passagedata pid="13" name="test_1" tags="" position="945,333" size="100,100">London is a bustling city where the action never stops.  &lt;%= character.name %&gt; has been to London many times and is quite familiar with the ins and outs. 
-
-&lt;%= character.name %&gt; heads to the market and finds a man selling tools. The merchant, after looking at your nice clothes, tells you that a spade is 10 gold.
-
-&lt;% if (character.gold &gt;= 10) { %&gt;
-    [[&quot;Okay!&quot;|Buy the Spade]]
-&lt;% } %&gt;
-
-[[&quot;10 gold? No thanks!&quot;|Another Merchant]]
-[[Go to Southwark|Southwark]]</tw-passagedata><tw-passagedata pid="14" name="Buy the Spade" tags="" position="944,458" size="100,100">&lt;%
-character.removeGold(10); // Remove the gold
-character.inventory.addItem(&quot;spade&quot;); // Give a spade to the player
-%&gt;
+&lt;center&gt;
 The merchant laughed as you walked away.
-
+&lt;/center&gt;
 [[Head back to Middlesex|Home]]
 
-</tw-passagedata><tw-passagedata pid="15" name="Home" tags="" position="946,589" size="100,100">&lt;% if (character.gold = 90) { %&gt;
+</tw-passagedata><tw-passagedata pid="7" name="Home" tags="" position="946,589" size="100,100">&quot;You have failed your first test. I asked you to purchase a spade and instead of purchasing it from a merchant who I have built a relationship with for a fair price, you paid 10 gold. Always do business with people you trust. Go to the field and use that spade to tend to the ground.&quot;
 
-&quot;You have failed your first test. I asked you to purchase a spade and instead of purchasing it from a merchant who I have built a relationship with for a fair price, you paid 10 gold. Always do business with people you trust. Go to the field and use that spade to tend to the ground.&quot;
+[[Go to the field|Field_bad]]</tw-passagedata><tw-passagedata pid="8" name="Another Merchant" tags="" position="1077,331" size="100,100">&lt;%= character.name %&gt; finds another merchant who your Father has done business with. He recognized you and offered you a silver ring for 5d. Which you gladely accept. 
+
+&lt;P ALIGN=RIGHT&gt;&lt;a href=&quot;http://medieval.ucdavis.edu/120D/Money.html&quot;&gt;3&lt;/a&gt;&lt;/p&gt;
+
+[[Thanks!|Buy the ring 5]]
+
+&lt;% if (character.health &gt; 17) { %&gt;
+[[Go to Southwark|Southwark1]]
 &lt;% } %&gt;
-[[Go to the field|Field_bad]]</tw-passagedata><tw-passagedata pid="16" name="Another Merchant" tags="" position="1077,331" size="100,100">&lt;%= character.name %&gt; finds another merchant who is also from Middlesex. He recognized you and offered you a spade for 5 gold. Which you gladely accept. 
-&lt;% if (character.gold &gt;= 10) { %&gt;
-    [[&quot;Thanks!&quot;|Buy the Spade 5]]
-&lt;% } %&gt;</tw-passagedata><tw-passagedata pid="17" name="Buy the Spade 5" tags="" position="1076,458" size="100,100">&lt;%
+</tw-passagedata><tw-passagedata pid="9" name="Buy the ring 5" tags="" position="1076,458" size="100,100">&lt;%
 character.removeGold(5); // Remove the gold
-character.inventory.addItem(&quot;spade&quot;); // Give a spade to the player
+character.inventory.addItem(&quot;ring&quot;); // 
 %&gt;
-The merchant yelled &quot;Tell your Father hello for me&quot; as you walked away.
+&lt;p&gt;The merchant yelled&lt;/p&gt;
+&lt;center&gt;
+&quot;Tell your Father hello for me&quot; as you walked away.
+&lt;/center&gt;
+[[Head back to Middlesex|Home_good]]</tw-passagedata><tw-passagedata pid="10" name="Home_good" tags="" position="1074,590" size="100,100">&lt;center&gt;
+&quot;You have passed your first test. When doing business, it is best to always use someone you trust. That way you get a fair deal. Go inside and take one item from my chest. You deserve it. &quot;
+&lt;/center&gt;
+[[Go inside|chest_home]]</tw-passagedata><tw-passagedata pid="11" name="chest_home" tags="" position="1076,725" size="100,100">&lt;%
+story.addLootItem(&quot;key&quot;);
+story.addLootItem(&quot;book&quot;);
+story.addLootItem(&quot;sword&quot;);
+story.addLootItem(&quot;coins&quot;);
+%&gt;
 
-[[Head back to Middlesex|Home_good]]</tw-passagedata><tw-passagedata pid="18" name="Home_good" tags="" position="1074,590" size="100,100">&lt;% if (character.gold = 95) { %&gt;
+You look inside the chest and contemplate what to take.
 
-&quot;You have passed your first test. When doing business, it is best to always use someone you trust. That way you get a fair deal. Go inside and have some bread.&quot;
+
+&lt;Center&gt;Drag and drop an item&lt;/center&gt;
+
+[[Continue|Next_day]] </tw-passagedata><tw-passagedata pid="12" name="Field_bad" tags="" position="949,727" size="100,100">&lt;%
+// The character will receive 2 points of damage
+character.damage(2);
+%&gt;
+&lt;% if (character.health &lt; 16) { %&gt;
+
+Your hands have been rubbed raw. Your Father tells you to stop working.
+[[Go to sleep|Next_day]]
 &lt;% } %&gt;
-[[Go inside|Bread_home]]</tw-passagedata><tw-passagedata pid="19" name="Bread_home" tags="" position="1076,725" size="100,100">&lt;%
-character.inventory.addItem(&quot;bread&quot;); // Give bread to the player
-%&gt;
-
-You eat the bread and think about what your father had said.
-
-[[Continue|Next_day]] </tw-passagedata><tw-passagedata pid="20" name="Field_bad" tags="" position="949,727" size="100,100">&lt;%
-character.damage(6);
-%&gt;
+&lt;% if (character.health &gt;= 16) { %&gt;
 
 The backbreaking work bloodies your hands. You want to quit working.
+[[Continue to work|Field_bad]]
+&lt;% } %&gt;
 
-[[Continue to work|Next_day]]
-[[Quit Working|Fail_2]]</tw-passagedata><tw-passagedata pid="21" name="Next_day" tags="" position="1000,872" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="22" name="Fail_2" tags="" position="802,726" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="23" name="Southwark" tags="" position="804,334" size="100,100">Southwark is filled with sin. Nearly every corner has a tavern or brothel. While exciting, Southwark can be bad news.
+&lt;% if (character.health &gt;= 16) { %&gt;
+
+[[Quit Working|Fail_2]]
+&lt;% } %&gt;
+</tw-passagedata><tw-passagedata pid="13" name="Next_day" tags="" position="1019,865" size="100,100">&lt;%
+character.inventory.addItem(&quot;bread&quot;); // 
+%&gt;
+
+Weeks later, your father wants you to learn more about the peasants that work in his fields. He tells you how important it is to understand them. 
+
+&lt;Center&gt;
+“You have to get them to work as hard as they can”
+&lt;/center&gt;
+
+[[Go to fields|peasants_field]]
+[[Go to peasants home|peasants_home1]]</tw-passagedata><tw-passagedata pid="14" name="Fail_2" tags="" position="747,721" size="100,100">You decide to keep working. If you do not, your father will punish you further.
+
+[[Go back to work|Field_bad]]</tw-passagedata><tw-passagedata pid="15" name="Southwark" tags="" position="804,334" size="100,100">Southwark is filled with sin. Nearly every corner has a tavern or brothel. While exciting, Southwark can be bad news.
 
 [[Have a drink|Drink]]
 [[Go back to the market|test_1]]
-</tw-passagedata><tw-passagedata pid="24" name="Drink" tags="" position="804,484" size="100,100">
+</tw-passagedata><tw-passagedata pid="16" name="Drink" tags="" position="803,455" size="100,100">
 &lt;%
 // The character will receive 1 points of damage
 character.damage(1);
 character.removeGold(1);
 %&gt;
-&lt;% if (character.health &lt; 16) { %&gt;
+&lt;% if (character.health &lt; 17) { %&gt;
 
 You have drank too much and have passed out
 [[Go back to the market|test_1]]
 &lt;% } %&gt;
-&lt;% if (character.health &gt;= 16) { %&gt;
+&lt;% if (character.health &gt;= 17) { %&gt;
 
 The tavern is filled with people and is a good time.
-[[Drink Another|Drink]]
-&lt;% } %&gt;</tw-passagedata></tw-storydata>
+[[Drink Another|drinks]]
+&lt;% } %&gt;
+
+&lt;% if (character.health &gt;= 18) { %&gt;
+You accidently spill your brew on another patron. He wants to settle it outside. He has been drinking heavily.
+[[Settle the disagreement|Fight]]
+&lt;% } %&gt;</tw-passagedata><tw-passagedata pid="17" name="Title" tags="" position="198,196" size="100,100">&lt;%
+// Hide the character panel (on the left)
+// It will be brought back in the following passage
+story.config.displayCharacterPanel = false;
+%&gt;
+&lt;center&gt;
+&lt;img src=&quot;https://i.imgur.com/y2sgf41.png&quot; alt=&quot;Logo&quot; style=&quot;width:400px;height:300px;&quot;&gt;&lt;/center&gt;
+&lt;center&gt;&lt;p&gt;BY: William Moore&lt;p&gt;&lt;/center&gt;
+
+&lt;audio autoplay&gt;
+&lt;source src=&quot;https://vocaroo.com/media_command.php?media=s1CtqOSPzGgu&amp;command=download_mp3&quot; type=&quot;audio/mpeg&quot;&gt;
+&lt;/audio&gt;
+
+[[Play Game|Choose your name]]
+[[Sources|Sources]]</tw-passagedata><tw-passagedata pid="18" name="Sources" tags="" position="198,346" size="100,100">&lt;p style=&quot;font-size:75%;&quot;&gt;Bibliography
+Barron, Caroline M. &quot;London in the Later Middle Ages 1300–1550.&quot; The London Journal 20, no. 2 (1995): 22-33. Accessed October 15, 2018. https://blackboard.slu.edu/webapps/blackboard/content/listContent.jsp?course_id=_178435_1&amp;content_id=_3109248_1.&lt;/p&gt;
+ &lt;p style=&quot;font-size:75%;&quot;&gt;
+———. Revolt in London: 11th to 15th June 1381. Museum of London, 1981. Accessed October 15, 2018. https://blackboard.slu.edu/bbcswebdav/pid-3109311-dt-content-rid-13668702_1/courses/201910-18581/Barron_Peasant%27srevolt.pdf.&lt;/p&gt;
+&lt;p style=&quot;font-size:75%;&quot;&gt; 
+Dyer, Christopher. Making a Living in The Middle Ages the People of Britain 850–1520. New Haven: Yale UP, 2005.&lt;/p&gt;
+&lt;p style=&quot;font-size:75%;&quot;&gt; 
+Harvey, Barbara F. Living and Dying in England, 1100-1540 : The Monastic Experience. New York: Oxford UP, 1993.&lt;/p&gt;
+&lt;p style=&quot;font-size:75%;&quot;&gt; 
+Hatcher, John. Plague, Population and the English Economy 1348-1530. Studies in Economic and Social History. London: Macmillan Press, 1977.&lt;/p&gt;
+&lt;p style=&quot;font-size:75%;&quot;&gt; 
+Hawkins, Duncan. &quot;The Black Death and the New London Cemeteries of 1348.&quot; Antiquity 64, no. 244 (September 1990): 637-42. https://blackboard.slu.edu/bbcswebdav/pid-3109296-dt-content-rid-13668271_1/courses/201910-18581/Hawkins_The%20BlackDeath_good.pdf.&lt;/p&gt;
+&lt;p style=&quot;font-size:75%;&quot;&gt; 
+McIntosh, Marjorie K. &quot;Money Lending on the Periphery of London, 1300-1600.&quot; Albion: A Quarterly Journal Concerned with British Studies 20, no. 4 (Winter 1988): 557-71. https://www-jstor-org.ezp.slu.edu/stable/pdf/4050197.pdf?refreqid=excelsior%3A967aaac389acc131283c586e373530de.&lt;/p&gt;
+&lt;p style=&quot;font-size:75%;&quot;&gt; 
+McKisack, May. The Reign of Richard II: Essays in Honour of May McKisack. Edited by F. R. H. Du Boulay and Caroline M. Barron. Athlone Press, 1971. Accessed October 15, 2018. https://blackboard.slu.edu/bbcswebdav/pid-3109324-dt-content-rid-13668720_1/courses/201910-18581/barron_london_richardII.pdf.&lt;/p&gt;
+&lt;p style=&quot;font-size:75%;&quot;&gt; 
+Richardson, John. The Annals of London A Year-By-Year Record of A Thousand Years of History. London: Cassell, 2000.&lt;/p&gt;
+&lt;p style=&quot;font-size:75%;&quot;&gt; 
+Russell, Josiah C. &quot;The Preplague Population of England.&quot; Journal of British Studies 5, no. 2 (May 1966): 1-21. Accessed October 15, 2018. https://www-jstor-org.ezp.slu.edu/stable/pdf/175314.pdf?refreqid=excelsior%3Aeef20882e962a6b45a07029b86cd121e.&lt;/p&gt;
+&lt;p style=&quot;font-size:75%;&quot;&gt; 
+Vardi, Liana. &quot;Serfdom: Western Europe.&quot; In Processes of Change/Population/Cities/Rural Life/State &amp; Society, edited by Peter N. Stearns, 369-78. Vol. 2 of Encyclopedia of European Social History. N.p.: Charles Scribner&#39;s Sons, 2001. http://go.galegroup.com.ezp.slu.edu/ps/retrieve.do?tabID=T003&amp;resultListType=RESULT_LIST&amp;searchResultsType=SingleTab&amp;searchType=BasicSearchForm&amp;currentPosition=4&amp;docId=GALE%7CCX3460500099&amp;docType=Topic+overview&amp;sort=RELEVANCE&amp;contentSegment=&amp;prodId=GVRL&amp;contentSet=GALE%7CCX3460500099&amp;searchId=R3&amp;userGroupName=sain44199&amp;inPS=true.&lt;/p&gt;
+&lt;p style=&quot;font-size:75%;&quot;&gt;
+English parliament. Statute of Labourers 1351. N.p., 1351.
+&lt;/p&gt;
+
+[[Back|Title]]</tw-passagedata><tw-passagedata pid="19" name="Drink2" tags="" position="1288,405.5" size="100,100">&lt;%
+// The character will receive 1 points of damage
+character.damage(1);
+character.removeGold(1);
+%&gt;
+
+&lt;% if (character.health &lt; 17) { %&gt;
+
+You have drank too much and have passed out
+[[Back to the market|Another Merchant]]
+&lt;% } %&gt;
+&lt;% if (character.health &gt;= 17) { %&gt;
+[[Drink Another|Drink3]]
+&lt;% } %&gt;
+
+&lt;% if (character.health &gt;= 18) { %&gt;
+You accidently spill your brew on another patron. He wants to settle it outside. He has been drinking heavily.
+[[Settle the disagreement|Fight]]
+&lt;% } %&gt;</tw-passagedata><tw-passagedata pid="20" name="Southwark1" tags="" position="1254,262" size="100,100">Southwark is filled with sin. Nearly every corner has a tavern or brothel. While exciting, Southwark can be bad news.
+
+[[Have a drink|Drink2]]
+[[Go back to the market|Another Merchant]]</tw-passagedata><tw-passagedata pid="21" name="Fight" tags="" position="1446,387.5" size="100,100">&lt;%
+// We make sure we kill the player
+character.damage(character.health);
+%&gt;
+
+&lt;audio autoplay&gt;
+&lt;source src=&quot;https://vocaroo.com/media_command.php?media=s1CtqOSPzGgu&amp;command=download_mp3&quot; type=&quot;audio/mpeg&quot;&gt;
+&lt;/audio&gt;
+
+Once outside the man brandished a sword which you had not seen thanks to the drinks.
+
+With one swing of his sword, &lt;%= character.name %&gt; was dead
+
+Being unarmed, there was little &lt;%= character.name %&gt; could have done.
+
+&lt;center&gt;
+&lt;img src=&quot;https://media.indiedb.com/images/articles/1/175/174859/auto/bard.gif&quot; alt=&quot;death&quot; style=&quot;width:400px;height:230px;&quot;&gt;&lt;/center&gt;</tw-passagedata><tw-passagedata pid="22" name="Drink3" tags="" position="1290,526.5" size="100,100">&lt;%
+// The character will receive 1 points of damage
+character.damage(1);
+character.removeGold(1);
+%&gt;
+
+&lt;% if (character.health &lt; 17) { %&gt;
+
+You have drank too much and have passed out
+[[Back to the market|Another Merchant]]
+&lt;% } %&gt;
+&lt;% if (character.health &gt;= 17) { %&gt;
+The tavern is filled with people and is a good time.
+[[Drink Another|Drink3]]
+&lt;% } %&gt;</tw-passagedata><tw-passagedata pid="23" name="drinks" tags="" position="581,396" size="100,100">&lt;%
+// The character will receive 1 points of damage
+character.damage(1);
+character.removeGold(1);
+%&gt;
+
+&lt;% if (character.health &lt; 17) { %&gt;
+
+You have drank too much and have passed out
+[[Back to the market|test_1]]
+&lt;% } %&gt;
+&lt;% if (character.health &gt;= 17) { %&gt;
+The tavern is filled with people and is a good time.
+[[Drink Another|drinks]]
+&lt;% } %&gt;</tw-passagedata><tw-passagedata pid="24" name="peasants_field" tags="" position="958,1014" size="100,100">Several peasants are working in the field as you walked up. You wondered how they could work day in and day out in the fields. The work was backbreaking, and the pay was poor. &lt;%= character.name %&gt; felt lucky that they did not have to work so hard. The peasants are planting wheat and barley.
+
+[[Why do you do this kind of work?|peasant_ans]]</tw-passagedata><tw-passagedata pid="25" name="peasants_home1" tags="" position="1094,1015" size="100,100">You walk over to the home of a peasant named Osmund. Your Father had said that he was expecting a baby. He lives in a small cottage that is made of mud and straw. His furnishings are so sparse that you wonder how his family can live. Osmund’s family gets by with a lot less than yours, even though his family is much larger.
+
+&lt;p&gt;&lt;center&gt;
+&quot;Come in! What can I do for you?”
+&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;Osmund says as you walk in.&lt;/p&gt;
+
+[[How are you Osmund|Baby]]
+</tw-passagedata><tw-passagedata pid="26" name="whereO" tags="" position="803,873" size="100,100">You ask where Osmund is. One of the peasants says that he is at his home caring for his wife.
+
+[[Go to Osmund&#39;s|peasants_home1]]</tw-passagedata><tw-passagedata pid="27" name="Baby" tags="" position="1235,894" size="100,100">&lt;center&gt;&quot;Have you had your child yet Osmond?&quot;&lt;/center&gt;
+&lt;p&gt;&lt;center&gt;&quot;No, it was a stillborn. Mary nearly died giving birth to him. Why has God taken another child from me?&quot;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&quot;He always has a plan Osmond. I&#39;ll pray for you and your family.&quot;&lt;/p&gt;
+&lt;P ALIGN=RIGHT&gt;&lt;a href=&quot;https://www.tandfonline.com/doi/full/10.1080/00766097.2015.1119392&quot;&gt;1&lt;/a&gt;&lt;/p&gt;
+
+[[Check on Mary|Mary]]
+
+
+
+</tw-passagedata><tw-passagedata pid="28" name="Mary" tags="" position="1232,1016" size="100,100">Mary looked extremely ill and her neck had a large growth on it. Osmund said that she was weak and that she had been vomiting quite frequently.
+&lt;p&gt;&lt;center&gt;“How are you feeling Mary?”&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;Just as &lt;%= character.name %&gt; spoke, Mary coughed up a small amount of blood.&lt;/p&gt; 
+
+&lt;p&gt;&quot;Osmund you must have her blessed. I will arrange for it.&quot;&lt;/p&gt;
+
+&lt;P ALIGN=RIGHT&gt;&lt;a href=&quot;https://www.mayoclinic.org/diseases-conditions/plague/symptoms-causes/syc-20351291&quot;&gt;2&lt;/a&gt;&lt;/p&gt;
+[[I will be back|Blessing]]
+[[Whip Mary’s forehead of sweat and comfort her|plague]] 
+</tw-passagedata><tw-passagedata pid="29" name="Blessing" tags="" position="958,1141" size="100,100">&lt;%= character.name %&gt; road to the chapel in Middlesex to find a clergy member to bless Mary. However, upon enter the church, he found many other people asking for blessings for their loved ones.
+
+You stop a priest and ask him what is going on..
+&lt;p&gt;&lt;center&gt;“God is punishing us for our sins. Dozens have fallen ill in Middlesex alone”&lt;/center&gt;&lt;/p&gt;
+
+[[Ask him to bless Mary|Blessed]]
+[[Give him your ring to bless Mary|ring_blessed]]</tw-passagedata><tw-passagedata pid="30" name="plague" tags="" position="1351,1018" size="100,100">&lt;center&gt;“Thank you &lt;%= character.name %&gt;, God bless you” said Mary&lt;/center&gt;
+
+&lt;P ALIGN=RIGHT&gt;&lt;a href=&quot;https://www.amazon.com/Making-Living-Middle-Ages-850-1520/dp/0300101910&quot;&gt;Chapter 8, Page 1&lt;/a&gt;&lt;/p&gt;
+
+[[I will be back|Blessing_plague]]</tw-passagedata><tw-passagedata pid="31" name="Blessing_plague" tags="" position="1093,1143" size="100,100">&lt;%= character.name %&gt; road to the chapel in Middlesex to find a clergy member to bless Mary. However, upon enter the church, he found many other people asking for blessings for their loved ones.
+
+You stop a priest and ask him what is going on..
+&lt;p&gt;&lt;center&gt;“God is punishing us for our sins. Dozens have fallen ill in Middlesex alone”&lt;/center&gt;&lt;/p&gt;
+[[Ask him to bless Mary|Blessed1]]
+[[Give him your ring to bless Mary|ring_blessed1]]</tw-passagedata><tw-passagedata pid="32" name="Blessed" tags="" position="959,1270" size="100,100">&lt;p&gt;&lt;center&gt;”I am far too busy caring for the sick here my son. I cannot leave right now”&lt;/center&gt;&lt;/p&gt;
+[[Go home|ring_blessed]]</tw-passagedata><tw-passagedata pid="33" name="ring_blessed" tags="" position="830,1215" size="100,100">&lt;p&gt;&lt;center&gt;”It is great to see such a faithful follower of God. Please go to my quarters and put it in my chest”&lt;/center&gt;&lt;/p&gt;
+
+[[Go to Priest&#39;s quarters|priest_room1]]</tw-passagedata><tw-passagedata pid="34" name="Blessed1" tags="" position="1090,1273" size="100,100">&lt;p&gt;&lt;center&gt;”I am far too busy caring for the sick here my son. I cannot leave right now”&lt;/center&gt;&lt;/p&gt;
+[[Go home|ring_blessed1]]
+</tw-passagedata><tw-passagedata pid="35" name="ring_blessed1" tags="" position="1246,1213" size="100,100">&lt;p&gt;&lt;center&gt;”It is great to see such a faithful follower of God. Please go to my quarters and put it in my chest”&lt;/center&gt;&lt;/p&gt;
+
+[[Go to Priest&#39;s quarters|priest_room]]</tw-passagedata><tw-passagedata pid="36" name="priest_room" tags="" position="1395,1221" size="100,100">You look around..
+
+&lt;%
+story.addLootItem(&quot;book&quot;);
+story.addLootItem(&quot;book&quot;);
+story.addLootItem(&quot;coins&quot;);
+story.addLootItem(&quot;churchkey&quot;);
+%&gt;
+
+[[Leave|Plague_church]]</tw-passagedata><tw-passagedata pid="37" name="Plague_church" tags="" position="1408,1374" size="100,100">&lt;p&gt;&lt;center&gt;”I will come to your manor midday tomorrow to bless Mary”&lt;/center&gt;&lt;/p&gt;
+&lt;%
+// This condition will check wether the player
+// has priestkey in its inventory. If yes,
+// it will display an additional choice.
+if (character.inventory.hasItem(&quot;churchkey&quot;)) {
+%&gt;
+
+[[Use Priest&#39;s Key to explore basement|Basement]]
+
+&lt;% } %&gt;
+[[Leave church|home_chruch1]]</tw-passagedata><tw-passagedata pid="38" name="priest_room1" tags="" position="695,1218" size="100,100">You look around..
+
+&lt;%
+story.addLootItem(&quot;book&quot;);
+story.addLootItem(&quot;book&quot;);
+story.addLootItem(&quot;coins&quot;);
+story.addLootItem(&quot;churchkey&quot;);
+%&gt;
+
+[[Leave|safe_church]]</tw-passagedata><tw-passagedata pid="39" name="safe_church" tags="" position="697,1366" size="100,100">&lt;p&gt;&lt;center&gt;”I will come to your manor midday tomorrow to bless Mary”&lt;/center&gt;&lt;/p&gt;
+&lt;%
+// This condition will check wether the player
+// has priestkey in its inventory. If yes,
+// it will display an additional choice.
+if (character.inventory.hasItem(&quot;churchkey&quot;)) {
+%&gt;
+
+[[Use Priest&#39;s Key to explore basement|Basement1]]
+
+&lt;% } %&gt;
+[[Leave church|home_chruch]]</tw-passagedata><tw-passagedata pid="40" name="home_chruch" tags="" position="955,1449" size="100,100">The next day, the priest comes to bless Mary, but now one of her children is also ill.
+
+Richard has contracted the illness from his mother.
+
+You are thankful that you did not get too close to her yesterday.
+
+The priest blesses both Richard and Mary.
+
+[[Continue|Healthy]]</tw-passagedata><tw-passagedata pid="41" name="Basement1" tags="" position="569,1368" size="100,100">&lt;%= character.name %&gt; sees an ornate chest at the bottom of the stairs. 
+[[Go downstairs|Chest_basement]]
+[[Leave|safe_church]]
+</tw-passagedata><tw-passagedata pid="42" name="Chest_basement" tags="" position="441,1371" size="100,100">&lt;%
+// We make sure we kill the player
+character.damage(character.health);
+%&gt;
+
+&lt;audio autoplay&gt;
+&lt;source src=&quot;https://vocaroo.com/media_command.php?media=s1CtqOSPzGgu&amp;command=download_mp3&quot; type=&quot;audio/mpeg&quot;&gt;
+&lt;/audio&gt;
+
+&lt;%= character.name %&gt;  loses their footing and slips on some condensation. 
+
+&lt;%= character.name %&gt;&#39;s neck is broken.
+
+&lt;center&gt;
+&lt;img src=&quot;https://media.indiedb.com/images/articles/1/175/174859/auto/bard.gif&quot; alt=&quot;death&quot; style=&quot;width:400px;height:230px;&quot;&gt;&lt;/center&gt;</tw-passagedata><tw-passagedata pid="43" name="Basement" tags="" position="1546,1373" size="100,100">&lt;%= character.name %&gt; sees an ornate chest at the bottom of the stairs. 
+[[Go downstairs|Chest_basement1]]
+[[Leave|Plague_church]]
+</tw-passagedata><tw-passagedata pid="44" name="home_chruch1" tags="" position="1100,1447" size="100,100">The next day, the priest comes to bless Mary, but now one of her children is also ill.
+
+Richard has contracted the illness from his mother.
+
+This makes you worried because you had gotten quite close to her yesterday.
+
+The priest blesses both Richard and Mary. 
+
+[[Continue|sick]]</tw-passagedata><tw-passagedata pid="45" name="Chest_basement1" tags="" position="1684,1374" size="100,100">&lt;%
+// We make sure we kill the player
+character.damage(character.health);
+%&gt;
+
+&lt;audio autoplay&gt;
+&lt;source src=&quot;https://vocaroo.com/media_command.php?media=s1CtqOSPzGgu&amp;command=download_mp3&quot; type=&quot;audio/mpeg&quot;&gt;
+&lt;/audio&gt;
+
+&lt;%= character.name %&gt;  loses their footing and slips on some condensation. 
+
+&lt;%= character.name %&gt;&#39;s neck is broken.
+
+&lt;center&gt;
+&lt;img src=&quot;https://media.indiedb.com/images/articles/1/175/174859/auto/bard.gif&quot; alt=&quot;death&quot; style=&quot;width:400px;height:230px;&quot;&gt;&lt;/center&gt;</tw-passagedata><tw-passagedata pid="46" name="sick" tags="" position="1188,1585" size="100,100">&lt;%
+character.damage(2);
+%&gt;
+
+
+You begin to feel ill. You have a high fever and a lump under your armpit.
+
+You are confined to your bed.
+&lt;P ALIGN=RIGHT&gt;&lt;a href=&quot;https://www.mayoclinic.org/diseases-conditions/plague/symptoms-causes/syc-20351291&quot;&gt;2&lt;/a&gt;&lt;/p&gt;
+[[Rest|Rest1]]</tw-passagedata><tw-passagedata pid="47" name="Healthy" tags="" position="955,1599" size="100,100">&lt;%= character.name %&gt; narrowly escaped the Black Plague. Your family, however, did not. Your Father has contracted the devilish illness. He dies several days later.
+[[Continue|Boss]]
+</tw-passagedata><tw-passagedata pid="48" name="peasant_ans" tags="" position="806,1007.5" size="100,100">&lt;center&gt;&quot;We have no choice &lt;%= character.name %&gt;. We barely make enough to scrap by. What else are we supposed to do?”&lt;/center&gt;
+
+[[Go work somewhere else?|dumb_q]]
+[[Ask about Osmund|whereO]]
+</tw-passagedata><tw-passagedata pid="49" name="dumb_q" tags="" position="644,942.5" size="100,100">“Wherever I would go, there would be 10 men just like me willing to work for less. I cannot leave.”
+
+&lt;%
+// This condition will check wether the player
+// has bread in its inventory. If yes,
+// it will display an additional choice.
+if (character.inventory.hasItem(&quot;bread&quot;)) {
+%&gt;
+
+[[Give Bread|Peasant_kind]]
+
+&lt;% } %&gt;
+
+[[Ask about Osmund|whereO]]</tw-passagedata><tw-passagedata pid="50" name="Peasant_kind" tags="" position="572,821.5" size="100,100">&lt;%
+character.inventory.addItem(&quot;luckystone&quot;); //
+character.inventory.removeItem(&quot;bread&quot;); // 
+%&gt;
+
+The peasant is very grateful. He gives you his lucky stone to show his gratitude.
+
+You are surprised to hear about their hardships. When you ask your Father about it, he replied 
+
+&lt;p&gt;&lt;center&gt;“They are just peasants and they will never be anything else”&lt;/center&gt;&lt;/p&gt;
+
+[[Ask about Osmund|whereO]]</tw-passagedata><tw-passagedata pid="51" name="Rest1" tags="" position="1342,1590" size="100,100">&lt;%
+character.damage(4);
+%&gt;
+
+Your symptoms have gotten worse.
+You are now coughing up blood.
+
+[[Rest|rest2]]
+</tw-passagedata><tw-passagedata pid="52" name="rest2" tags="" position="1500,1594" size="100,100">&lt;%
+// We make sure we kill the player
+character.damage(character.health);
+%&gt;
+
+&lt;audio autoplay&gt;
+&lt;source src=&quot;https://vocaroo.com/media_command.php?media=s1CtqOSPzGgu&amp;command=download_mp3&quot; type=&quot;audio/mpeg&quot;&gt;
+&lt;/audio&gt;
+
+&lt;%= character.name %&gt; has died from the Black Plague.
+
+&lt;center&gt;
+&lt;img src=&quot;https://media.indiedb.com/images/articles/1/175/174859/auto/bard.gif&quot; alt=&quot;death&quot; style=&quot;width:400px;height:230px;&quot;&gt;&lt;/center&gt;</tw-passagedata><tw-passagedata pid="53" name="Boss" tags="" position="955,1749" size="100,100">Several years have passed and you now control the manor and its workers. Circumstances have changed, however. The Plague killed so many of your workers that now you must pay them more money. They will not stay if you do not.
+&lt;P ALIGN=RIGHT&gt;&lt;a href=&quot;http://eds.b.ebscohost.com/eds/detail/detail?vid=1&amp;sid=cf60ff9e-6f84-47ef-8db1-995401a91263%40pdc-v-sessmgr02&amp;bdata=JnNpdGU9ZWRzLWxpdmU%3d#AN=slu.b1357949&amp;db=cat00825a&quot;&gt;4&lt;/a&gt;&lt;/p&gt;
+[[Pay them more|money_bags]]
+[[Let them leave|bad_c]]
+</tw-passagedata><tw-passagedata pid="54" name="money_bags" tags="" position="880,1899" size="100,100">Paying your workers more paid off. Other Nobles chose not to and lost their workforce. Peasant workers now a valuable commodity. 
+
+Your actions were well received by your workers.
+
+[[Continue|end_age]]
+</tw-passagedata><tw-passagedata pid="55" name="bad_c" tags="" position="1030,1899" size="100,100">You stop and think about it…
+
+&lt;%
+if (character.inventory.hasItem(&quot;luckystone&quot;)) {
+%&gt;
+
+[[Talk to peasants|end_age]]
+
+&lt;% } %&gt;
+[[Do not raise their wage|wrong_c]]
+</tw-passagedata><tw-passagedata pid="56" name="end_age" tags="" position="906,2041" size="100,100">&lt;%= character.name %&gt; lives to be quite an old age.
+
+You lived a long and happy life. 
+[[Play Again|Title]]</tw-passagedata><tw-passagedata pid="57" name="wrong_c" tags="" position="1200,2001" size="100,100">&lt;%
+// We make sure we kill the player
+character.damage(character.health);
+%&gt;
+
+&lt;audio autoplay&gt;
+&lt;source src=&quot;https://vocaroo.com/media_command.php?media=s1CtqOSPzGgu&amp;command=download_mp3&quot; type=&quot;audio/mpeg&quot;&gt;
+&lt;/audio&gt;
+
+Many years later, a group of peasants comes to your manor. They kill you for being a trader.
+
+&lt;center&gt;
+&lt;img src=&quot;https://media.indiedb.com/images/articles/1/175/174859/auto/bard.gif&quot; alt=&quot;death&quot; style=&quot;width:400px;height:230px;&quot;&gt;&lt;/center&gt;</tw-passagedata></tw-storydata>
 	<script>/******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
